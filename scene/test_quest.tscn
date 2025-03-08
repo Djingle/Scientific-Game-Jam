@@ -13,8 +13,7 @@ script = ExtResource("1_8om6a")
 position = Vector2(963, 512)
 script = ExtResource("2_7qlk4")
 
-[node name="GnomeCollection" type="Node2D" parent="."]
-y_sort_enabled = true
+[node name="GnomeCollection" type="Node" parent="."]
 
 [node name="Gnome" parent="GnomeCollection" instance=ExtResource("3_fit4s")]
 position = Vector2(778, 374)
@@ -22,17 +21,18 @@ position = Vector2(778, 374)
 [node name="Gnome2" parent="GnomeCollection" instance=ExtResource("3_fit4s")]
 position = Vector2(313, 469)
 
-[node name="Quest" parent="GnomeCollection/Gnome2" node_paths=PackedStringArray("draggable_gnomes", "goal_gnome", "next_gnome") instance=ExtResource("4_7qlk4")]
-is_active = true
+[node name="Quest" parent="GnomeCollection/Gnome2" node_paths=PackedStringArray("draggable_gnomes", "goal_gnome") instance=ExtResource("4_7qlk4")]
 draggable_gnomes = [NodePath("../../Gnome")]
 goal_gnome = NodePath("../../Gnome4")
-next_gnome = NodePath("../../Gnome4")
+is_active = true
 
 [node name="Gnome3" parent="GnomeCollection" instance=ExtResource("3_fit4s")]
 position = Vector2(1572, 15)
 
 [node name="Gnome4" parent="GnomeCollection" instance=ExtResource("3_fit4s")]
 position = Vector2(1132, 400)
+
+[node name="QuestCollection" type="Node" parent="."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

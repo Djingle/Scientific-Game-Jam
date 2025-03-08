@@ -2,8 +2,6 @@ extends CharacterBody2D
 
 class_name Gnome
 
-@export var speech_intro : String = ""
-@export var speech_outro : String = ""
 var dragging : bool = false
 var mouse_pos : Vector2 = Vector2.ZERO
 var previous_pos : Vector2 = Vector2.ZERO
@@ -11,8 +9,6 @@ var immune_to_pickup : bool = false
 
 signal hover(gnome : Gnome)
 signal deselect(gnome : Gnome)
-signal talk(speech : String)
-signal start_quest(pos : Vector2)
 
 func _process(_delta: float) -> void:
 	#When mouse is released
@@ -63,9 +59,6 @@ func drag() -> void:
 		await tween.finished
 		dragging = true
 		z_index = 1
-
-func quest_start() -> void:
-	emit_signal("start_quest", global_position)
 
 func _on_mouse_entered() -> void:
 	emit_signal("hover", self)

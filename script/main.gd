@@ -6,9 +6,10 @@ func _ready() -> void:
 	for child : Gnome in $GnomeCollection.get_children():
 		child.hover.connect(add_gnome)
 		child.deselect.connect(remove_gnome)
-		child.talk.connect(gnome_talking)
-		child.start_quest.connect(camera_to_pos)
-
+	for child : Quest in $QuestCollection.get_children():
+		child.quest_start.connect(quest_start)
+		child.quest_completed.connect(quest_completed)
+		
 func _process(_delta: float) -> void:
 	gnome_drag_and_drop()
 
@@ -28,9 +29,19 @@ func add_gnome(gnome : Gnome) -> void:
 func remove_gnome(gnome : Gnome) -> void:
 	gnome_array.erase(gnome)
 
-func gnome_talking(speech : String):
+func gnome_talking(speech : String) -> void:
 	$CanvasLayer/UI.display_text(speech)
 
-func camera_to_pos(pos : Vector2):
-	print(pos)
+func quest_start(quest : Quest, pos : Vector2) -> void:
 	$Camera.move_to(pos)
+	await $Camera.movement_done
+	$CanvasLayer/UI.display_text(quest.speech_intro)
+
+func quest_completed(quest : Quest) -> void:
+	$CanvasLayer/UI.display_text(quest.speech_outro)
+	await $CanvasLayer/UI.text_written
+	$QuestEndTimer.start()
+	await $QuestEndTimer.timeout
+	quest.next_quest.is_active = true
+	quest.next_quest.start_quest()
+	

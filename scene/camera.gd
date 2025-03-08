@@ -4,6 +4,8 @@ extends Camera2D
 @export var camera_speed : int = 1000
 var screen_size : Vector2
 var player_control : bool = true
+
+signal movement_done()
  
 func _ready() -> void:
 	screen_size = DisplayServer.screen_get_size()
@@ -29,3 +31,4 @@ func move_to(pos : Vector2):
 	tween.tween_property(self, "global_position", pos, global_position.distance_to(pos) * 0.002).set_trans(Tween.TRANS_QUART).set_ease(Tween.EASE_IN_OUT)
 	await tween.finished
 	player_control = true
+	emit_signal("movement_done")

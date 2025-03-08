@@ -1,6 +1,7 @@
 extends Control
 
 signal tween_done()
+signal text_written()
 
 var is_writing : bool = false
 var is_displayed : bool = false
@@ -39,12 +40,13 @@ func display_text(speech : String):
 		is_writing = true
 		if !is_displayed:
 			display_manager()
-			await self.tween_done
+			await tween_done
 		$DialogText/DialogLabel.text = speech
 		$DialogText/DialogLabel.visible_ratio = 0
 		var tween = create_tween()
-		tween.tween_property($DialogText/DialogLabel, "visible_ratio", 1, 0.1 * speech.length())
+		tween.tween_property($DialogText/DialogLabel, "visible_ratio", 1, 0.03 * speech.length())
 		await tween.finished
+		emit_signal("text_written")
 		is_writing = false
 	
 func _on_menu_button_pressed() -> void:
