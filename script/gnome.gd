@@ -13,19 +13,26 @@ signal deselect(gnome : Gnome)
 signal talk(speech : String)
 
 func _process(_delta: float) -> void:
+	#When mouse is released
 	if Input.is_action_just_released("mouse_click"):
+		#If gnome is being dragged, it "falls to the ground" and is immune to being picked up during the animation
 		if dragging:
 			dragging = false
 			z_index = 0
 			var tween = create_tween()
+			tween.set_parallel()
 			tween.tween_property(self, "scale", Vector2(1, 1), 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
+			print(position, previous_pos)
+			tween.tween_property(self, "position", position + (position - previous_pos) * 2, 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
 			immune_to_pickup = true
 			await tween.finished
 			immune_to_pickup = false
+		#If the mouse is released while not dragged, it will talk instead
 		elif mouse_pos != Vector2.ZERO:
 			mouse_pos = Vector2.ZERO
 			$Timer.stop()
 			say()
+	#When being dragged, it will follow the mouse
 	if dragging:
 		var tween = create_tween()
 		tween.tween_property(self, "global_position", get_global_mouse_position(), 0.05)
