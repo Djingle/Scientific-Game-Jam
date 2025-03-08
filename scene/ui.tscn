@@ -20,6 +20,7 @@ mouse_filter = 1
 script = ExtResource("1_onfsl")
 
 [node name="TaskRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.025

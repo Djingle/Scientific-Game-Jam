@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqq3un8rbqboe"]
 
 [ext_resource type="Script" uid="uid://cqk5qwlqyhp2s" path="res://script/main.gd" id="1_brvut"]
-[ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://camera_2d-test.gd" id="2_wp4xf"]
+[ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://scene/camera.gd" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://cgc7fjmwp6w0g" path="res://scene/gnome.tscn" id="3_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://brkewjwagy8ch" path="res://scene/ui.tscn" id="4_0ha60"]
 
@@ -17,11 +17,9 @@ y_sort_enabled = true
 
 [node name="Gnome" parent="GnomeCollection" instance=ExtResource("3_wp4xf")]
 position = Vector2(1121, 479)
-speech = "Hello fella !"
 
 [node name="Gnome2" parent="GnomeCollection" instance=ExtResource("3_wp4xf")]
 position = Vector2(1432, 507)
-speech = "Hi guys !"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

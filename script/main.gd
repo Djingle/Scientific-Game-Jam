@@ -7,6 +7,7 @@ func _ready() -> void:
 		child.hover.connect(add_gnome)
 		child.deselect.connect(remove_gnome)
 		child.talk.connect(gnome_talking)
+		child.start_quest.connect(camera_to_pos)
 
 func _process(_delta: float) -> void:
 	gnome_drag_and_drop()
@@ -29,3 +30,7 @@ func remove_gnome(gnome : Gnome) -> void:
 
 func gnome_talking(speech : String):
 	$CanvasLayer/UI.display_text(speech)
+
+func camera_to_pos(pos : Vector2):
+	print(pos)
+	$Camera.move_to(pos)

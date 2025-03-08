@@ -1,12 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bhmy50c783ps8"]
+[gd_scene load_steps=2 format=3 uid="uid://bhmy50c783ps8"]
 
 [ext_resource type="Script" uid="uid://btamxq6ko6cwv" path="res://script/quest.gd" id="1_3anai"]
-[ext_resource type="Texture2D" uid="uid://defnmscuiba74" path="res://icon.svg" id="2_53aov"]
 
-[node name="quest" type="Node2D"]
+[node name="Quest" type="Node"]
 script = ExtResource("1_3anai")
-is_active = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -150)
-texture = ExtResource("2_53aov")
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
