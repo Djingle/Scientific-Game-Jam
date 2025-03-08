@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://hx167w8uhq4x"]
+[gd_scene load_steps=30 format=3 uid="uid://o3l1fkcyxfsa"]
 
 [ext_resource type="Texture2D" uid="uid://cq1v5ts5ahnsj" path="res://img/assets/petites_fleurs.png" id="2_6qsgm"]
 [ext_resource type="Texture2D" uid="uid://d1dwecv3rca8m" path="res://img/assets/pommier.png" id="2_e0an3"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://dllf752it55h5" path="res://img/assets/pizzeria.png" id="29_h75vw"]
 
 [node name="Node2D" type="Node2D"]
+y_sort_enabled = true
 
 [node name="végé" type="Node" parent="."]
 

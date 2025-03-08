@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://cqk5qwlqyhp2s" path="res://script/main.gd" id="1_8om6a"]
 [ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://scene/camera.gd" id="2_7qlk4"]
 [ext_resource type="PackedScene" uid="uid://cgc7fjmwp6w0g" path="res://scene/gnome.tscn" id="3_fit4s"]
-[ext_resource type="PackedScene" uid="uid://bhmy50c783ps8" path="res://scene/quest.tscn" id="4_7qlk4"]
 [ext_resource type="PackedScene" uid="uid://brkewjwagy8ch" path="res://scene/ui.tscn" id="4_v1lcm"]
+[ext_resource type="PackedScene" uid="uid://o3l1fkcyxfsa" path="res://map.tscn" id="6_fit4s"]
 
 [node name="test_quest" type="Node"]
 script = ExtResource("1_8om6a")
@@ -13,24 +13,22 @@ script = ExtResource("1_8om6a")
 position = Vector2(963, 512)
 script = ExtResource("2_7qlk4")
 
+[node name="Map" parent="." instance=ExtResource("6_fit4s")]
+position = Vector2(1, 0)
+
+[node name="Gnome" parent="Map" instance=ExtResource("3_fit4s")]
+position = Vector2(990, 548)
+
+[node name="Gnome2" parent="Map" instance=ExtResource("3_fit4s")]
+position = Vector2(312, 469)
+
+[node name="Gnome3" parent="Map" instance=ExtResource("3_fit4s")]
+position = Vector2(1571, 15)
+
+[node name="Gnome4" parent="Map" instance=ExtResource("3_fit4s")]
+position = Vector2(1131, 400)
+
 [node name="GnomeCollection" type="Node" parent="."]
-
-[node name="Gnome" parent="GnomeCollection" instance=ExtResource("3_fit4s")]
-position = Vector2(778, 374)
-
-[node name="Gnome2" parent="GnomeCollection" instance=ExtResource("3_fit4s")]
-position = Vector2(313, 469)
-
-[node name="Quest" parent="GnomeCollection/Gnome2" node_paths=PackedStringArray("draggable_gnomes", "goal_gnome") instance=ExtResource("4_7qlk4")]
-draggable_gnomes = [NodePath("../../Gnome")]
-goal_gnome = NodePath("../../Gnome4")
-is_active = true
-
-[node name="Gnome3" parent="GnomeCollection" instance=ExtResource("3_fit4s")]
-position = Vector2(1572, 15)
-
-[node name="Gnome4" parent="GnomeCollection" instance=ExtResource("3_fit4s")]
-position = Vector2(1132, 400)
 
 [node name="QuestCollection" type="Node" parent="."]
 

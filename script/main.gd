@@ -21,7 +21,7 @@ func gnome_drag_and_drop() -> void:
 		for child in gnome_array:
 			if child.position.y > gnome.position.y: gnome = child
 		#Set is as being dragged
-		gnome_array[gnome_array.find(gnome)].click()
+		gnome_array[gnome_array.find(gnome)].drag()
 
 func add_gnome(gnome : Gnome) -> void:
 	gnome_array.append(gnome)
@@ -44,4 +44,3 @@ func quest_completed(quest : Quest) -> void:
 	await $QuestEndTimer.timeout
 	quest.next_quest.is_active = true
 	quest.next_quest.start_quest()
-	
