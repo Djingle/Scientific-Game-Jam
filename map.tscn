@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://hx167w8uhq4x"]
+[gd_scene load_steps=42 format=3 uid="uid://o3l1fkcyxfsa"]
 
 [ext_resource type="Texture2D" uid="uid://cq1v5ts5ahnsj" path="res://img/assets/petites_fleurs.png" id="2_6qsgm"]
 [ext_resource type="Texture2D" uid="uid://d1dwecv3rca8m" path="res://img/assets/pommier.png" id="2_e0an3"]
@@ -45,7 +45,8 @@
 [node name="Node2D" type="Node2D"]
 y_sort_enabled = true
 
-[node name="végé" type="Node" parent="."]
+[node name="végé" type="Node2D" parent="."]
+y_sort_enabled = true
 
 [node name="PetitesFleurs2" type="Sprite2D" parent="végé"]
 z_index = 1
@@ -492,8 +493,8 @@ texture = ExtResource("19_xkcq7")
 [node name="Chemin9" type="Sprite2D" parent="végé"]
 z_index = -1
 position = Vector2(-264, 570)
-rotation = -1.30376
-scale = Vector2(-1, -0.963)
+rotation = 1.83783
+scale = Vector2(1, 0.963)
 texture = ExtResource("19_xkcq7")
 
 [node name="Chemin8" type="Sprite2D" parent="végé"]
@@ -613,7 +614,6 @@ scale = Vector2(2, 1.99)
 texture = ExtResource("11_jky6x")
 region_enabled = true
 region_rect = Rect2(0, 0, 4096, 3100)
-metadata/_edit_lock_ = true
 
 [node name="autre" type="Node" parent="."]
 
