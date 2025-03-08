@@ -23,7 +23,8 @@ func _process(_delta: float) -> void:
 			var tween = create_tween()
 			tween.set_parallel()
 			tween.tween_property(self, "scale", Vector2(1, 1), 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
-			tween.tween_property(self, "position", position + (position - previous_pos) * 2, 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
+			print("pos :", position, previous_pos)
+			tween.tween_property(self, "position", position + (position - previous_pos) * 20, 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 			immune_to_pickup = true
 			await tween.finished
 			immune_to_pickup = false
