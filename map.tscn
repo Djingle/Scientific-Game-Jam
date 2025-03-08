@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://hx167w8uhq4x"]
+[gd_scene load_steps=42 format=3 uid="uid://hx167w8uhq4x"]
 
 [ext_resource type="Texture2D" uid="uid://cq1v5ts5ahnsj" path="res://img/assets/petites_fleurs.png" id="2_6qsgm"]
 [ext_resource type="Texture2D" uid="uid://d1dwecv3rca8m" path="res://img/assets/pommier.png" id="2_e0an3"]
@@ -20,15 +20,27 @@
 [ext_resource type="Texture2D" uid="uid://ca0ccvllqbrok" path="res://img/assets/étang.png" id="16_6sq2s"]
 [ext_resource type="Texture2D" uid="uid://48mioqsivqw8" path="res://img/assets/fleurs_rouge.png" id="16_n2jt6"]
 [ext_resource type="Texture2D" uid="uid://titrjdsgixtm" path="res://img/assets/rocher-1.png" id="17_4v3wx"]
+[ext_resource type="Texture2D" uid="uid://bxntl5p0v88nb" path="res://img/assets/sapin.png" id="17_kpdfo"]
+[ext_resource type="Texture2D" uid="uid://premr6tae3g1" path="res://img/assets/chemin2.png" id="18_e1wd7"]
+[ext_resource type="Texture2D" uid="uid://de40n4lbsvk5l" path="res://img/assets/chemin.png" id="19_xkcq7"]
 [ext_resource type="Texture2D" uid="uid://6l0cpgoigj2r" path="res://img/assets/points.png" id="19_y1wlr"]
+[ext_resource type="Texture2D" uid="uid://b6jar4mouddvp" path="res://img/assets/pierre.png" id="20_8uufd"]
 [ext_resource type="Texture2D" uid="uid://tuqjn8h71qrt" path="res://img/assets/pousse.png" id="20_n2jt6"]
 [ext_resource type="Texture2D" uid="uid://b1glb85gp4yt3" path="res://img/assets/fleurrouge.png" id="21_h75vw"]
 [ext_resource type="Texture2D" uid="uid://fxqlkwcgijjc" path="res://img/assets/ble.png" id="22_7vxqa"]
+[ext_resource type="Texture2D" uid="uid://mia3j6cm4dfx" path="res://img/assets/maison_champi_bleu.png" id="22_a454a"]
+[ext_resource type="Texture2D" uid="uid://dw48hqpmlglb3" path="res://img/assets/maison_navet.png" id="23_te172"]
+[ext_resource type="Texture2D" uid="uid://f3brmccmqf1r" path="res://img/assets/maison_carotte.png" id="24_2kko2"]
 [ext_resource type="Texture2D" uid="uid://cg4noi7xmtygi" path="res://img/assets/rocher.png" id="25_h75vw"]
 [ext_resource type="Texture2D" uid="uid://dglcfry6txse5" path="res://img/assets/guirlande.png" id="26_7vxqa"]
 [ext_resource type="Texture2D" uid="uid://bbvswekv10uw6" path="res://img/assets/barriere.png" id="27_qw8h8"]
 [ext_resource type="Texture2D" uid="uid://ddqhl6oq1uwc4" path="res://img/assets/estrade.png" id="28_n2jt6"]
 [ext_resource type="Texture2D" uid="uid://dllf752it55h5" path="res://img/assets/pizzeria.png" id="29_h75vw"]
+[ext_resource type="Texture2D" uid="uid://2e8e5hu7x43g" path="res://img/assets/bac fleur.png" id="33_kpdfo"]
+[ext_resource type="Texture2D" uid="uid://d274vsni3cuw6" path="res://img/assets/nainjardin.png" id="34_vbtoe"]
+[ext_resource type="Texture2D" uid="uid://bqb6m1odrol2h" path="res://img/assets/podium.png" id="36_vbtoe"]
+[ext_resource type="Texture2D" uid="uid://cdpef4sxrpvnj" path="res://img/assets/fontaine.png" id="37_e1wd7"]
+[ext_resource type="Texture2D" uid="uid://taslxgomvwvw" path="res://img/assets/herbe.png" id="41_1xagg"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -36,205 +48,566 @@
 
 [node name="PetitesFleurs2" type="Sprite2D" parent="végé"]
 z_index = 1
-position = Vector2(2226, -343)
+position = Vector2(2209.75, -331.833)
+scale = Vector2(1.17513, 1.17513)
+texture = ExtResource("2_6qsgm")
+
+[node name="PetitesFleurs4" type="Sprite2D" parent="végé"]
+z_index = 1
+position = Vector2(2443.75, 439.167)
+scale = Vector2(1.17513, 1.17513)
+texture = ExtResource("2_6qsgm")
+
+[node name="PetitesFleurs3" type="Sprite2D" parent="végé"]
+z_index = 1
+position = Vector2(1014.75, 545.168)
 scale = Vector2(1.17513, 1.17513)
 texture = ExtResource("2_6qsgm")
 
 [node name="pommier" type="Sprite2D" parent="végé"]
-position = Vector2(-1185, -510)
+position = Vector2(-1201.25, -498.833)
 scale = Vector2(1.42418, 1.42418)
 texture = ExtResource("2_e0an3")
 
 [node name="pommier2" type="Sprite2D" parent="végé"]
-position = Vector2(2220, -865)
+position = Vector2(2154.75, -838.833)
+scale = Vector2(1.42418, 1.42418)
+texture = ExtResource("2_e0an3")
+
+[node name="pommier4" type="Sprite2D" parent="végé"]
+position = Vector2(-2185.25, 2240.17)
+scale = Vector2(1.42418, 1.42418)
+texture = ExtResource("2_e0an3")
+
+[node name="pommier5" type="Sprite2D" parent="végé"]
+position = Vector2(3466, 2616)
+scale = Vector2(1.44621, 1.51792)
+texture = ExtResource("2_e0an3")
+
+[node name="pommier3" type="Sprite2D" parent="végé"]
+z_index = 1
+position = Vector2(2888.75, 955.167)
 scale = Vector2(1.42418, 1.42418)
 texture = ExtResource("2_e0an3")
 
 [node name="PetitesFleurs" type="Sprite2D" parent="végé"]
 z_index = 1
-position = Vector2(-901, 1324)
+position = Vector2(-917.25, 1335.17)
 texture = ExtResource("2_6qsgm")
 
 [node name="PetitBuisson" type="Sprite2D" parent="végé"]
 z_index = 1
-position = Vector2(633.685, 570.75)
+position = Vector2(331.435, 565.222)
+scale = Vector2(1.58219, 1.58219)
+texture = ExtResource("3_ooc2g")
+
+[node name="PetitBuisson4" type="Sprite2D" parent="végé"]
+z_index = 1
+position = Vector2(581.75, 2308.17)
+scale = Vector2(1.58219, 1.58219)
+texture = ExtResource("3_ooc2g")
+
+[node name="PetitBuisson2" type="Sprite2D" parent="végé"]
+z_index = 1
+position = Vector2(988, -1524)
+scale = Vector2(1.58219, 1.58219)
+texture = ExtResource("3_ooc2g")
+
+[node name="PetitBuisson3" type="Sprite2D" parent="végé"]
+z_index = 1
+position = Vector2(-892.25, -2194.83)
 scale = Vector2(1.58219, 1.58219)
 texture = ExtResource("3_ooc2g")
 
 [node name="Potager2" type="Sprite2D" parent="végé"]
-position = Vector2(-1991, 1016)
+position = Vector2(-2007.25, 1027.17)
+scale = Vector2(1.23404, 1.23404)
+texture = ExtResource("4_2wwcf")
+
+[node name="Potager4" type="Sprite2D" parent="végé"]
+position = Vector2(3483.75, -2371.83)
 scale = Vector2(1.23404, 1.23404)
 texture = ExtResource("4_2wwcf")
 
 [node name="Tournesol" type="Sprite2D" parent="végé"]
-position = Vector2(-2415, 994)
+position = Vector2(-2431.25, 1005.17)
 texture = ExtResource("5_wbpbn")
 
 [node name="Tournesol2" type="Sprite2D" parent="végé"]
-position = Vector2(-1583, 986)
+position = Vector2(-1599.25, 997.167)
+texture = ExtResource("5_wbpbn")
+
+[node name="Tournesol5" type="Sprite2D" parent="végé"]
+position = Vector2(1582.75, -872.833)
 texture = ExtResource("5_wbpbn")
 
 [node name="Butte" type="Sprite2D" parent="végé"]
-position = Vector2(1909, -465)
+position = Vector2(1892.75, -453.832)
 scale = Vector2(1.81839, 1.81839)
 texture = ExtResource("6_a6rn7")
 
 [node name="Butte3" type="Sprite2D" parent="végé"]
-position = Vector2(4017, 968)
+position = Vector2(4000.75, 979.167)
+scale = Vector2(1.81839, 1.81839)
+texture = ExtResource("6_a6rn7")
+
+[node name="Butte4" type="Sprite2D" parent="végé"]
+position = Vector2(-559.25, 1944.17)
 scale = Vector2(1.81839, 1.81839)
 texture = ExtResource("6_a6rn7")
 
 [node name="Butte2" type="Sprite2D" parent="végé"]
 z_index = 1
-position = Vector2(-2026, 139)
+position = Vector2(-2042.25, 150.167)
+scale = Vector2(1.81839, 1.81839)
+texture = ExtResource("6_a6rn7")
+
+[node name="Butte5" type="Sprite2D" parent="végé"]
+z_index = 1
+position = Vector2(-1248.25, -2576.83)
 scale = Vector2(1.81839, 1.81839)
 texture = ExtResource("6_a6rn7")
 
 [node name="Arbre" type="Sprite2D" parent="végé"]
-position = Vector2(-1523, -715)
+position = Vector2(-1607.25, -673.833)
+scale = Vector2(1.23579, 1.23579)
+texture = ExtResource("13_3mr0t")
+
+[node name="Arbre5" type="Sprite2D" parent="végé"]
+position = Vector2(-2860.25, -416.833)
 scale = Vector2(1.23579, 1.23579)
 texture = ExtResource("13_3mr0t")
 
 [node name="Arbre3" type="Sprite2D" parent="végé"]
-position = Vector2(2535, -1247)
+position = Vector2(2474.75, -1151.83)
 scale = Vector2(1.23579, 1.23579)
 texture = ExtResource("13_3mr0t")
 
+[node name="Arbre4" type="Sprite2D" parent="végé"]
+position = Vector2(2259.75, -2293.83)
+scale = Vector2(1.65468, 1.65468)
+texture = ExtResource("13_3mr0t")
+
 [node name="Arbre2" type="Sprite2D" parent="végé"]
-position = Vector2(-2435.12, -1991.07)
+position = Vector2(-2451.38, -1979.91)
 scale = Vector2(1.57107, 1.57107)
 texture = ExtResource("13_3mr0t")
 
 [node name="ChampiJaune" type="Sprite2D" parent="végé"]
-position = Vector2(3403, -779)
+position = Vector2(3386.75, -767.832)
 scale = Vector2(0.876924, 0.901994)
 texture = ExtResource("8_jky6x")
 
 [node name="BuissonFougere" type="Sprite2D" parent="végé"]
 z_index = 1
-position = Vector2(2745, 1465)
+position = Vector2(2728.75, 1476.17)
+texture = ExtResource("9_4sf5t")
+
+[node name="BuissonFougere3" type="Sprite2D" parent="végé"]
+z_index = 1
+position = Vector2(-248.25, 2349.36)
 texture = ExtResource("9_4sf5t")
 
 [node name="ChampiRouge" type="Sprite2D" parent="végé"]
-position = Vector2(3554, -720)
+position = Vector2(3537.75, -708.833)
 texture = ExtResource("10_3mr0t")
 
 [node name="Points" type="Sprite2D" parent="végé"]
-position = Vector2(-565, 957)
+position = Vector2(-581.25, 968.167)
+scale = Vector2(1.54615, 1.54615)
+texture = ExtResource("19_y1wlr")
+
+[node name="Points4" type="Sprite2D" parent="végé"]
+position = Vector2(-2371.25, -1450.83)
 scale = Vector2(1.54615, 1.54615)
 texture = ExtResource("19_y1wlr")
 
 [node name="Points3" type="Sprite2D" parent="végé"]
-position = Vector2(-2496, 71.9999)
+position = Vector2(-2512.25, 83.1674)
+scale = Vector2(1.54615, 1.54615)
+texture = ExtResource("19_y1wlr")
+
+[node name="Points6" type="Sprite2D" parent="végé"]
+position = Vector2(3731.75, 327.168)
+scale = Vector2(1.54615, 1.54615)
+texture = ExtResource("19_y1wlr")
+
+[node name="Points8" type="Sprite2D" parent="végé"]
+position = Vector2(3072.75, -2228.83)
 scale = Vector2(1.54615, 1.54615)
 texture = ExtResource("19_y1wlr")
 
 [node name="Points2" type="Sprite2D" parent="végé"]
-position = Vector2(2749, -425)
+position = Vector2(1593.75, 445.167)
+scale = Vector2(1.54615, 1.54615)
+texture = ExtResource("19_y1wlr")
+
+[node name="Points7" type="Sprite2D" parent="végé"]
+position = Vector2(1401.75, -1493.83)
+scale = Vector2(1.54615, 1.54615)
+texture = ExtResource("19_y1wlr")
+
+[node name="Points5" type="Sprite2D" parent="végé"]
+position = Vector2(1990.75, 2305.17)
 scale = Vector2(1.54615, 1.54615)
 texture = ExtResource("19_y1wlr")
 
 [node name="Pommier" type="Sprite2D" parent="végé"]
-position = Vector2(-1868, -202)
+position = Vector2(-1884.25, -190.832)
 scale = Vector2(1.42623, 1.42623)
 texture = ExtResource("2_e0an3")
 
 [node name="Pousse" type="Sprite2D" parent="végé"]
-position = Vector2(-816, 83)
+position = Vector2(-832.25, 94.1675)
+texture = ExtResource("20_n2jt6")
+
+[node name="Pousse10" type="Sprite2D" parent="végé"]
+position = Vector2(-2692.25, -1543.83)
 texture = ExtResource("20_n2jt6")
 
 [node name="Pousse4" type="Sprite2D" parent="végé"]
-position = Vector2(-1439, -416)
+position = Vector2(-1455.25, -404.833)
 texture = ExtResource("20_n2jt6")
 
 [node name="Pousse2" type="Sprite2D" parent="végé"]
-position = Vector2(-254, 936)
+position = Vector2(-270.25, 947.167)
 texture = ExtResource("20_n2jt6")
 
 [node name="Pousse3" type="Sprite2D" parent="végé"]
-position = Vector2(2587, -202)
+position = Vector2(2570.75, -190.833)
+texture = ExtResource("20_n2jt6")
+
+[node name="Pousse9" type="Sprite2D" parent="végé"]
+position = Vector2(1392.75, -526.833)
 texture = ExtResource("20_n2jt6")
 
 [node name="Pousse6" type="Sprite2D" parent="végé"]
-position = Vector2(3586, 1087)
+position = Vector2(3569.75, 1098.17)
+texture = ExtResource("20_n2jt6")
+
+[node name="Pousse8" type="Sprite2D" parent="végé"]
+position = Vector2(3867.75, 105.167)
 texture = ExtResource("20_n2jt6")
 
 [node name="Pousse7" type="Sprite2D" parent="végé"]
-position = Vector2(3536, 1349)
+position = Vector2(3519.75, 1360.17)
 texture = ExtResource("20_n2jt6")
 
 [node name="Pousse5" type="Sprite2D" parent="végé"]
-position = Vector2(3461, -714)
+position = Vector2(3444.75, -702.833)
 texture = ExtResource("20_n2jt6")
 
 [node name="Fleurrouge" type="Sprite2D" parent="végé"]
-position = Vector2(-662, 722)
+position = Vector2(-678.25, 733.167)
 texture = ExtResource("21_h75vw")
 
 [node name="Fleurrouge2" type="Sprite2D" parent="végé"]
-position = Vector2(-349, 819)
+position = Vector2(-365.25, 830.167)
+texture = ExtResource("21_h75vw")
+
+[node name="Fleurrouge4" type="Sprite2D" parent="végé"]
+position = Vector2(3789.75, -0.83252)
+texture = ExtResource("21_h75vw")
+
+[node name="Fleurrouge5" type="Sprite2D" parent="végé"]
+position = Vector2(3981.75, 50.1675)
 texture = ExtResource("21_h75vw")
 
 [node name="Fleurrouge3" type="Sprite2D" parent="végé"]
-position = Vector2(-1652, 96)
+position = Vector2(-1668.25, 107.167)
+texture = ExtResource("21_h75vw")
+
+[node name="Fleurrouge6" type="Sprite2D" parent="végé"]
+position = Vector2(919.75, -817.833)
+texture = ExtResource("21_h75vw")
+
+[node name="Fleurrouge7" type="Sprite2D" parent="végé"]
+position = Vector2(-1347.25, -1302.83)
+texture = ExtResource("21_h75vw")
+
+[node name="Fleurrouge8" type="Sprite2D" parent="végé"]
+z_index = 1
+position = Vector2(-1204.25, -1158.83)
 texture = ExtResource("21_h75vw")
 
 [node name="Ble2" type="Sprite2D" parent="végé"]
-position = Vector2(2656, -840)
+position = Vector2(2639.75, -828.833)
 texture = ExtResource("22_7vxqa")
 
 [node name="Ble3" type="Sprite2D" parent="végé"]
-position = Vector2(2870, -751)
+position = Vector2(2857, -2016)
+texture = ExtResource("22_7vxqa")
+
+[node name="Ble5" type="Sprite2D" parent="végé"]
+position = Vector2(-2245, -214)
+texture = ExtResource("22_7vxqa")
+
+[node name="Ble6" type="Sprite2D" parent="végé"]
+position = Vector2(-575, 2364)
+texture = ExtResource("22_7vxqa")
+
+[node name="Ble7" type="Sprite2D" parent="végé"]
+position = Vector2(-792, 2480)
+texture = ExtResource("22_7vxqa")
+
+[node name="Ble8" type="Sprite2D" parent="végé"]
+position = Vector2(-1018, 2342)
 texture = ExtResource("22_7vxqa")
 
 [node name="Ble4" type="Sprite2D" parent="végé"]
-position = Vector2(2527, -575)
+position = Vector2(2510.75, -563.833)
 texture = ExtResource("22_7vxqa")
 
 [node name="BuissonFougere2" type="Sprite2D" parent="végé"]
-position = Vector2(3707, -521)
+position = Vector2(3690.75, -509.833)
+texture = ExtResource("9_4sf5t")
+
+[node name="BuissonFougere4" type="Sprite2D" parent="végé"]
+position = Vector2(3649.75, 507.167)
 texture = ExtResource("9_4sf5t")
 
 [node name="Chanterelle" type="Sprite2D" parent="végé"]
-position = Vector2(3696, -815)
+position = Vector2(3679.75, -803.833)
+texture = ExtResource("15_y1wlr")
+
+[node name="ChampiJaune2" type="Sprite2D" parent="végé"]
+position = Vector2(-2654.25, -1648.83)
+scale = Vector2(0.876924, 0.901994)
+texture = ExtResource("8_jky6x")
+
+[node name="ChampiJaune3" type="Sprite2D" parent="végé"]
+position = Vector2(1395.75, -898.833)
+scale = Vector2(0.876924, 0.901994)
+texture = ExtResource("8_jky6x")
+
+[node name="ChampiRouge2" type="Sprite2D" parent="végé"]
+position = Vector2(-2361.25, 154.167)
+texture = ExtResource("10_3mr0t")
+
+[node name="ChampiRouge4" type="Sprite2D" parent="végé"]
+z_index = 1
+position = Vector2(723.75, 2095.17)
+texture = ExtResource("10_3mr0t")
+
+[node name="ChampiRouge3" type="Sprite2D" parent="végé"]
+position = Vector2(1455.75, -676.833)
+texture = ExtResource("10_3mr0t")
+
+[node name="Chanterelle2" type="Sprite2D" parent="végé"]
+position = Vector2(-2667.25, -21.8325)
+texture = ExtResource("15_y1wlr")
+
+[node name="Chanterelle3" type="Sprite2D" parent="végé"]
+position = Vector2(876.75, 2166.17)
 texture = ExtResource("15_y1wlr")
 
 [node name="FleursRouge" type="Sprite2D" parent="végé"]
-position = Vector2(3035, 1561)
+z_index = 1
+position = Vector2(2074.75, 1435.17)
+texture = ExtResource("16_n2jt6")
+
+[node name="FleursRouge3" type="Sprite2D" parent="végé"]
+position = Vector2(4188.75, 1361.17)
+texture = ExtResource("16_n2jt6")
+
+[node name="FleursRouge2" type="Sprite2D" parent="végé"]
+position = Vector2(2204.75, 2412.17)
 texture = ExtResource("16_n2jt6")
 
 [node name="Potager" type="Sprite2D" parent="végé"]
-position = Vector2(3281, 1159)
+position = Vector2(3264.75, 1170.17)
 texture = ExtResource("4_2wwcf")
 
 [node name="Potager3" type="Sprite2D" parent="végé"]
-position = Vector2(3850, 1336)
+position = Vector2(3833.75, 1347.17)
 texture = ExtResource("4_2wwcf")
+
+[node name="Tournesol3" type="Sprite2D" parent="végé"]
+position = Vector2(2162.75, 2021.17)
+texture = ExtResource("5_wbpbn")
+
+[node name="Tournesol4" type="Sprite2D" parent="végé"]
+position = Vector2(1798.75, 2289.17)
+texture = ExtResource("5_wbpbn")
+
+[node name="Sapin" type="Sprite2D" parent="végé"]
+position = Vector2(-2656.25, 1863.17)
+scale = Vector2(1.35852, 1.35852)
+texture = ExtResource("17_kpdfo")
+
+[node name="Sapin5" type="Sprite2D" parent="végé"]
+position = Vector2(3013, 2211)
+scale = Vector2(1.17444, 1.24455)
+texture = ExtResource("17_kpdfo")
+
+[node name="Sapin4" type="Sprite2D" parent="végé"]
+position = Vector2(3899.75, -1803.83)
+scale = Vector2(1.35852, 1.35852)
+texture = ExtResource("17_kpdfo")
+
+[node name="Sapin3" type="Sprite2D" parent="végé"]
+position = Vector2(2831.62, -2568.94)
+scale = Vector2(1.08119, 1.08119)
+texture = ExtResource("17_kpdfo")
+
+[node name="Sapin2" type="Sprite2D" parent="végé"]
+position = Vector2(-1893.25, -2381.83)
+scale = Vector2(1.35852, 1.35852)
+texture = ExtResource("17_kpdfo")
+
+[node name="Chemin2" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(-881, 1725)
+rotation = 0.415388
+texture = ExtResource("18_e1wd7")
+
+[node name="Chemin7" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(2146, 919)
+rotation = 1.19031
+scale = Vector2(1.19221, 0.924032)
+texture = ExtResource("18_e1wd7")
+
+[node name="Chemin3" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(-627, -835)
+rotation = 0.415388
+texture = ExtResource("18_e1wd7")
+
+[node name="Chemin6" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(357, -273)
+rotation = 1.0088
+scale = Vector2(1.40102, 0.99279)
+texture = ExtResource("18_e1wd7")
+
+[node name="Chemin" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(177, 1260)
+rotation = 0.237365
+scale = Vector2(0.926971, 0.892622)
+texture = ExtResource("19_xkcq7")
+
+[node name="Chemin9" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(-264, 570)
+rotation = -1.30376
+scale = Vector2(-1, -0.963)
+texture = ExtResource("19_xkcq7")
+
+[node name="Chemin8" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(1377, 840)
+rotation = 1.18682
+scale = Vector2(0.926971, 0.892622)
+texture = ExtResource("19_xkcq7")
+
+[node name="Chemin5" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(260, -1040)
+rotation = 0.237365
+scale = Vector2(0.781587, 0.822316)
+texture = ExtResource("19_xkcq7")
+
+[node name="Chemin4" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(2709, -466)
+rotation = 0.237365
+scale = Vector2(0.897458, 0.866952)
+texture = ExtResource("19_xkcq7")
+
+[node name="Pierre" type="Sprite2D" parent="végé"]
+position = Vector2(2378, 1462)
+scale = Vector2(1.70548, 1.70548)
+texture = ExtResource("20_8uufd")
+
+[node name="Pierre2" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(571, -1626)
+scale = Vector2(1.70548, 1.70548)
+texture = ExtResource("20_8uufd")
+
+[node name="Pierre3" type="Sprite2D" parent="végé"]
+z_index = -1
+position = Vector2(241, 2326)
+scale = Vector2(1.70548, 1.70548)
+texture = ExtResource("20_8uufd")
+
+[node name="Herbe" type="Sprite2D" parent="végé"]
+position = Vector2(-1498, 1558)
+scale = Vector2(1.76099, 1.65321)
+texture = ExtResource("41_1xagg")
+
+[node name="Herbe2" type="Sprite2D" parent="végé"]
+position = Vector2(1298, 1364)
+scale = Vector2(1.76099, 1.65321)
+texture = ExtResource("41_1xagg")
+
+[node name="Herbe3" type="Sprite2D" parent="végé"]
+position = Vector2(1671, -2194)
+scale = Vector2(1.76099, 1.65321)
+texture = ExtResource("41_1xagg")
+
+[node name="Herbe4" type="Sprite2D" parent="végé"]
+position = Vector2(-1478, -1926)
+scale = Vector2(1.76099, 1.65321)
+texture = ExtResource("41_1xagg")
+
+[node name="Herbe5" type="Sprite2D" parent="végé"]
+position = Vector2(-2995, 717)
+scale = Vector2(1.76099, 1.65321)
+texture = ExtResource("41_1xagg")
+
+[node name="Herbe6" type="Sprite2D" parent="végé"]
+position = Vector2(-2451, 2338)
+scale = Vector2(1.76099, 1.65321)
+texture = ExtResource("41_1xagg")
 
 [node name="maison" type="Node" parent="."]
 
 [node name="MaisonChampi" type="Sprite2D" parent="maison"]
-position = Vector2(924, 195)
+position = Vector2(621.75, 189.472)
 scale = Vector2(1.80942, 1.80942)
 texture = ExtResource("7_4on3e")
 
 [node name="MaisonChampiJaune" type="Sprite2D" parent="maison"]
-position = Vector2(-470, -165)
+position = Vector2(-917.25, -1492.83)
 scale = Vector2(1.47785, 1.47785)
 texture = ExtResource("8_bssq0")
 
 [node name="MaisonOignon" type="Sprite2D" parent="maison"]
-position = Vector2(2403, 1138)
-scale = Vector2(1.27953, 1.27953)
+position = Vector2(2387.77, 1149.17)
+scale = Vector2(1.2756, 1.27953)
 texture = ExtResource("9_jk4ss")
 
 [node name="MaisonPoireau" type="Sprite2D" parent="maison"]
-position = Vector2(-1182, 1129)
+position = Vector2(-1198.25, 1140.17)
 scale = Vector2(1.288, 1.288)
 texture = ExtResource("10_r5om4")
 
+[node name="Pizzeria" type="Sprite2D" parent="maison"]
+position = Vector2(222.75, 1837.17)
+scale = Vector2(1.60324, 1.60324)
+texture = ExtResource("29_h75vw")
+
+[node name="MaisonChampiBleu" type="Sprite2D" parent="maison"]
+position = Vector2(2076.75, 225.167)
+scale = Vector2(1.51092, 1.51092)
+texture = ExtResource("22_a454a")
+
+[node name="MaisonNavet" type="Sprite2D" parent="maison"]
+position = Vector2(3179.75, -1524.83)
+scale = Vector2(1.6017, 1.6017)
+texture = ExtResource("23_te172")
+
+[node name="MaisonCarotte" type="Sprite2D" parent="maison"]
+position = Vector2(-486.25, -245.833)
+scale = Vector2(1.43603, 1.43603)
+texture = ExtResource("24_2kko2")
+
 [node name="Texturessol" type="Sprite2D" parent="."]
-position = Vector2(881, 69)
+z_index = -1
+position = Vector2(679, -192)
 scale = Vector2(2, 1.99)
 texture = ExtResource("11_jky6x")
 region_enabled = true
@@ -244,54 +617,94 @@ metadata/_edit_lock_ = true
 [node name="autre" type="Node" parent="."]
 
 [node name="Étang" type="Sprite2D" parent="autre"]
-position = Vector2(-1840, -1465)
+position = Vector2(-1856.25, -1453.83)
 scale = Vector2(1.45402, 1.45402)
 texture = ExtResource("16_6sq2s")
 
 [node name="Rocher-1" type="Sprite2D" parent="autre"]
-position = Vector2(1648, 1526)
+z_index = 1
+position = Vector2(3999.75, 1681.17)
 scale = Vector2(1.6374, 1.6374)
 texture = ExtResource("17_4v3wx")
 
+[node name="Rocher-2" type="Sprite2D" parent="autre"]
+position = Vector2(2476.93, 2509.79)
+scale = Vector2(2.11761, 2.05534)
+texture = ExtResource("17_4v3wx")
+
 [node name="Tabouret" type="Sprite2D" parent="autre"]
-position = Vector2(289, 566)
+position = Vector2(-13.25, 560.472)
 scale = Vector2(1.18304, 1.18304)
 texture = ExtResource("12_4sf5t")
 
 [node name="Tabouret2" type="Sprite2D" parent="autre"]
-position = Vector2(-1331, -156)
+position = Vector2(-2547.25, -1377.83)
 scale = Vector2(1.18304, 1.18304)
 texture = ExtResource("12_4sf5t")
 
 [node name="Rocher" type="Sprite2D" parent="autre"]
-position = Vector2(-460, 1113)
+position = Vector2(-476.25, 1124.17)
+texture = ExtResource("25_h75vw")
+
+[node name="Rocher4" type="Sprite2D" parent="autre"]
+position = Vector2(-1935.25, 2558.17)
 texture = ExtResource("25_h75vw")
 
 [node name="Rocher2" type="Sprite2D" parent="autre"]
-position = Vector2(3054, -563)
+position = Vector2(3037.75, -551.833)
+texture = ExtResource("25_h75vw")
+
+[node name="Rocher3" type="Sprite2D" parent="autre"]
+position = Vector2(-54.25, 328.472)
 texture = ExtResource("25_h75vw")
 
 [node name="Guirlande" type="Sprite2D" parent="autre"]
-position = Vector2(550, -2389)
+position = Vector2(533.75, -2377.83)
 scale = Vector2(1.38301, 1.38301)
 texture = ExtResource("26_7vxqa")
 
 [node name="Barriere" type="Sprite2D" parent="autre"]
-position = Vector2(-1978.51, 1289)
+position = Vector2(-1994.76, 1300.17)
 scale = Vector2(1.21622, 1.21622)
 texture = ExtResource("27_qw8h8")
 
 [node name="Barriere2" type="Sprite2D" parent="autre"]
-position = Vector2(3608, 1610)
+position = Vector2(3591.75, 1621.17)
 scale = Vector2(1.21622, 1.21622)
 texture = ExtResource("27_qw8h8")
 
 [node name="Estrade" type="Sprite2D" parent="autre"]
-position = Vector2(658, -1893)
+position = Vector2(641.75, -1881.83)
 scale = Vector2(0.856087, 0.950355)
 texture = ExtResource("28_n2jt6")
 
-[node name="Pizzeria" type="Sprite2D" parent="."]
-position = Vector2(-98, 2161)
-scale = Vector2(1.34413, 1.34413)
-texture = ExtResource("29_h75vw")
+[node name="BacFleur" type="Sprite2D" parent="autre"]
+position = Vector2(1830.75, 1193.17)
+texture = ExtResource("33_kpdfo")
+
+[node name="BacFleur4" type="Sprite2D" parent="autre"]
+position = Vector2(-2724.25, 1217.17)
+texture = ExtResource("33_kpdfo")
+
+[node name="BacFleur2" type="Sprite2D" parent="autre"]
+position = Vector2(-354.25, -1286.83)
+texture = ExtResource("33_kpdfo")
+
+[node name="BacFleur3" type="Sprite2D" parent="autre"]
+position = Vector2(2521.75, -2064.83)
+texture = ExtResource("33_kpdfo")
+
+[node name="Nainjardin" type="Sprite2D" parent="autre"]
+z_index = 1
+position = Vector2(-1055.25, -22.8325)
+scale = Vector2(1.36517, 1.36517)
+texture = ExtResource("34_vbtoe")
+
+[node name="Podium" type="Sprite2D" parent="autre"]
+position = Vector2(3465.75, 157.167)
+scale = Vector2(0.786347, 0.786347)
+texture = ExtResource("36_vbtoe")
+
+[node name="Fontaine" type="Sprite2D" parent="autre"]
+position = Vector2(1110.75, -898.833)
+texture = ExtResource("37_e1wd7")

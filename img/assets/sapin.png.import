@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de40n4lbsvk5l"
-path="res://.godot/imported/chemin.png-da7620aa32242f9a1cf0fe4af951fbb3.ctex"
+uid="uid://bxntl5p0v88nb"
+path="res://.godot/imported/sapin.png-d6d421cb51fe1b09a5d30eaa0f585353.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/assets/chemin.png"
-dest_files=["res://.godot/imported/chemin.png-da7620aa32242f9a1cf0fe4af951fbb3.ctex"]
+source_file="res://img/assets/sapin.png"
+dest_files=["res://.godot/imported/sapin.png-d6d421cb51fe1b09a5d30eaa0f585353.ctex"]
 
 [params]
 

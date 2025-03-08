@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de04iy2a8danh"
-path="res://.godot/imported/chemin-quart.png-f853abb05790084ff7ed23cb4d01417a.ctex"
+uid="uid://dw48hqpmlglb3"
+path="res://.godot/imported/maison_navet.png-e2ae6297e85f83a037d717537f8ef92a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/assets/chemin-quart.png"
-dest_files=["res://.godot/imported/chemin-quart.png-f853abb05790084ff7ed23cb4d01417a.ctex"]
+source_file="res://img/assets/maison_navet.png"
+dest_files=["res://.godot/imported/maison_navet.png-e2ae6297e85f83a037d717537f8ef92a.ctex"]
 
 [params]
 
