@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cqk5qwlqyhp2s" path="res://script/main.gd" id="1_brvut"]
 [ext_resource type="Texture2D" uid="uid://defnmscuiba74" path="res://icon.svg" id="1_v0l8b"]
 [ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://camera_2d-test.gd" id="2_wp4xf"]
-[ext_resource type="PackedScene" uid="uid://cgc7fjmwp6w0g" path="res://scene/gnome.tscn" id="3_wp4xf"]
+[ext_resource type="PackedScene" uid="uid://lws435t4jbwh" path="res://scene/gnome.tscn" id="3_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://brkewjwagy8ch" path="res://scene/ui.tscn" id="4_0ha60"]
 
 [node name="Main" type="Node"]
