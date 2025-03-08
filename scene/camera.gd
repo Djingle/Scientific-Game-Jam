@@ -14,13 +14,13 @@ func _process(delta: float) -> void:
 	if player_control:
 		var direction : Vector2 = Vector2(0, 0)
 	 
-		if Input.is_action_pressed("left") or get_local_mouse_position().x + screen_size.x/2 < screen_size.x / 10:
+		if Input.is_action_pressed("left") or get_local_mouse_position().x + screen_size.x/2 < screen_size.x / 100:
 			direction.x -= camera_speed
-		if Input.is_action_pressed("right") or get_local_mouse_position().x + screen_size.x/2 > screen_size.x - screen_size.x / 10:
+		if Input.is_action_pressed("right") or get_local_mouse_position().x + screen_size.x/2 > screen_size.x - screen_size.x / 100:
 			direction.x += camera_speed
-		if Input.is_action_pressed("up") or get_local_mouse_position().y + screen_size.y/2 < screen_size.y / 10:
+		if Input.is_action_pressed("up") or get_local_mouse_position().y + screen_size.y/2 < screen_size.y / 100:
 			direction.y -= camera_speed
-		if Input.is_action_pressed("down") or get_local_mouse_position().y + screen_size.y/2 > screen_size.y - screen_size.y / 10:
+		if Input.is_action_pressed("down") or get_local_mouse_position().y + screen_size.y/2 > screen_size.y - screen_size.y / 100:
 			direction.y += camera_speed
 
 		position += direction.normalized() * camera_speed * delta
