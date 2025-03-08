@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de40n4lbsvk5l"
-path="res://.godot/imported/chemin.png-da7620aa32242f9a1cf0fe4af951fbb3.ctex"
+uid="uid://mia3j6cm4dfx"
+path="res://.godot/imported/maison_champi_bleu.png-7fb782ac6cee4bc6ace6c55e19fbde50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/assets/chemin.png"
-dest_files=["res://.godot/imported/chemin.png-da7620aa32242f9a1cf0fe4af951fbb3.ctex"]
+source_file="res://img/assets/maison_champi_bleu.png"
+dest_files=["res://.godot/imported/maison_champi_bleu.png-7fb782ac6cee4bc6ace6c55e19fbde50.ctex"]
 
 [params]
 

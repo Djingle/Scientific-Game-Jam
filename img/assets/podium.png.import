@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de40n4lbsvk5l"
-path="res://.godot/imported/chemin.png-da7620aa32242f9a1cf0fe4af951fbb3.ctex"
+uid="uid://bqb6m1odrol2h"
+path="res://.godot/imported/podium.png-79ca95d141c6276f5a78a8ec570a4cef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/assets/chemin.png"
-dest_files=["res://.godot/imported/chemin.png-da7620aa32242f9a1cf0fe4af951fbb3.ctex"]
+source_file="res://img/assets/podium.png"
+dest_files=["res://.godot/imported/podium.png-79ca95d141c6276f5a78a8ec570a4cef.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ul0y61gdqupc"
-path="res://.godot/imported/chemin_bout.png-bbb8d52b016d15acd9cabad715b18cac.ctex"
+uid="uid://premr6tae3g1"
+path="res://.godot/imported/chemin2.png-c0cdf4938fd86450d0158852195246b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/assets/chemin_bout.png"
-dest_files=["res://.godot/imported/chemin_bout.png-bbb8d52b016d15acd9cabad715b18cac.ctex"]
+source_file="res://img/assets/chemin2.png"
+dest_files=["res://.godot/imported/chemin2.png-c0cdf4938fd86450d0158852195246b7.ctex"]
 
 [params]
 
