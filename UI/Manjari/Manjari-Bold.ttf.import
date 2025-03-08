@@ -2,7 +2,11 @@
 
 importer="font_data_dynamic"
 type="FontFile"
+<<<<<<< HEAD
+uid="uid://bmrpl20y0sp77"
+=======
 uid="uid://cscn42kcvmqoy"
+>>>>>>> 463de37982b161aeab7ce181e91772e67086826e
 path="res://.godot/imported/Manjari-Bold.ttf-2eeb2e4853b487995276d9ce76d1dc03.fontdata"
 
 [deps]
