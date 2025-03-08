@@ -8,7 +8,7 @@ var is_displayed : bool = false
 var last_speech : String = ""
 
 func _ready() -> void:
-	$DialogText/DialogCloseButton.hide()
+	display_manager(false)
 
 func display_manager(mode : bool = true):
 	#Shrinks or displays the text box
