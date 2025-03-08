@@ -26,3 +26,6 @@ speech = "Hi guys !"
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("4_0ha60")]
+
+[node name="Gnome" parent="." instance=ExtResource("3_wp4xf")]
+position = Vector2(-322, 466)
