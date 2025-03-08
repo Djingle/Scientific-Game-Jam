@@ -13,37 +13,23 @@ script = ExtResource("1_brvut")
 position = Vector2(963, 512)
 script = ExtResource("2_wp4xf")
 
-[node name="GnomeCollection" type="Node" parent="."]
-
-[node name="Gnome" parent="GnomeCollection" instance=ExtResource("3_wp4xf")]
-position = Vector2(201, 436)
-
-[node name="Gnome2" parent="GnomeCollection" instance=ExtResource("3_wp4xf")]
-position = Vector2(476, 433)
-
-[node name="Gnome3" parent="GnomeCollection" instance=ExtResource("3_wp4xf")]
-position = Vector2(790, 452)
-
-[node name="Gnome4" parent="GnomeCollection" instance=ExtResource("3_wp4xf")]
-position = Vector2(1187, 453)
-
 [node name="QuestCollection" type="Node" parent="."]
 
 [node name="Quest" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("4_4j5ol")]
 speech_intro = "Regarde ! Eudes s’est cassé le [pied], il faudrait que tu lui files un coup de main…"
 speech_outro = "Félicitation !"
-quest_gnome = NodePath("../../GnomeCollection/Gnome")
-draggable_gnomes = [NodePath("../../GnomeCollection/Gnome2"), NodePath("../../GnomeCollection/Gnome3")]
-goal_gnome = NodePath("../../GnomeCollection/Gnome4")
+quest_gnome = NodePath("../../Map/GnomeCollection/Gnome")
+draggable_gnomes = [NodePath("../../Map/GnomeCollection/Gnome2"), NodePath("../../Map/GnomeCollection/Gnome3")]
+goal_gnome = NodePath("../../Map/GnomeCollection/Gnome4")
 is_active = true
 next_quest = NodePath("../Quest2")
 
 [node name="Quest2" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("4_4j5ol")]
 speech_intro = "Pol le Pizzaïolo a l’air désespéré. C’est vrai qu’il ne sait pas faire les [gâteaux]… Peux-tu lui trouver une solution ?"
 speech_outro = "Bravo !"
-quest_gnome = NodePath("../../GnomeCollection/Gnome4")
-draggable_gnomes = [NodePath("../../GnomeCollection/Gnome3")]
-goal_gnome = NodePath("../../GnomeCollection/Gnome")
+quest_gnome = NodePath("../../Map/GnomeCollection/Gnome4")
+draggable_gnomes = [NodePath("../../Map/GnomeCollection/Gnome3")]
+goal_gnome = NodePath("../../Map/GnomeCollection/Gnome")
 next_quest = NodePath("../Quest")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -53,3 +39,20 @@ next_quest = NodePath("../Quest")
 [node name="QuestEndTimer" type="Timer" parent="."]
 wait_time = 5.0
 one_shot = true
+
+[node name="Map" type="Node" parent="."]
+
+[node name="GnomeCollection" type="Node2D" parent="Map"]
+y_sort_enabled = true
+
+[node name="Gnome" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
+position = Vector2(201, 436)
+
+[node name="Gnome2" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
+position = Vector2(476, 433)
+
+[node name="Gnome3" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
+position = Vector2(790, 452)
+
+[node name="Gnome4" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
+position = Vector2(1187, 453)

@@ -3,7 +3,7 @@ extends Node
 var gnome_array : Array[Gnome] = []
 
 func _ready() -> void:
-	for child : Gnome in $GnomeCollection.get_children():
+	for child : Gnome in $Map/GnomeCollection.get_children():
 		child.hover.connect(add_gnome)
 		child.deselect.connect(remove_gnome)
 	for child : Quest in $QuestCollection.get_children():
