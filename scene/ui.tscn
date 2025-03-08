@@ -20,6 +20,7 @@ mouse_filter = 1
 script = ExtResource("1_onfsl")
 
 [node name="TaskRect" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.025
@@ -93,5 +94,14 @@ offset_bottom = 40.0
 grow_horizontal = 0
 texture_normal = ExtResource("2_s2f8l")
 
+[node name="DialogOpenButton" type="TextureButton" parent="DialogText"]
+layout_mode = 0
+offset_left = 794.0
+offset_top = -136.6
+offset_right = 922.0
+offset_bottom = -8.59998
+texture_normal = ExtResource("2_s2f8l")
+
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
 [connection signal="pressed" from="DialogText/DialogCloseButton" to="." method="_on_dialog_close_button_pressed"]
+[connection signal="pressed" from="DialogText/DialogOpenButton" to="." method="_on_dialog_open_button_pressed"]

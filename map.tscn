@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://brn3a7j5j4jp3" path="res://img/assets/maison_oignon.png" id="9_jk4ss"]
 [ext_resource type="Texture2D" uid="uid://cuy804cjtsvlw" path="res://img/assets/champi_rouge.png" id="10_3mr0t"]
 [ext_resource type="Texture2D" uid="uid://bnr75mjtseotn" path="res://img/assets/maison_poireau.png" id="10_r5om4"]
-[ext_resource type="Texture2D" uid="uid://bc2qa6lwdegc1" path="res://img/assets/texturessol.png" id="11_jky6x"]
+[ext_resource type="Texture2D" uid="uid://d4l54a7s7d3qb" path="res://img/assets/texture-sol2.png" id="11_jky6x"]
 [ext_resource type="Texture2D" uid="uid://prxgcko4j4uc" path="res://img/assets/tabouret.png" id="12_4sf5t"]
 [ext_resource type="Texture2D" uid="uid://lpl6t6dsra0u" path="res://img/assets/arbre.png" id="13_3mr0t"]
 [ext_resource type="Texture2D" uid="uid://634kymmq2aik" path="res://img/assets/chanterelle.png" id="15_y1wlr"]
@@ -43,6 +43,7 @@
 [ext_resource type="Texture2D" uid="uid://taslxgomvwvw" path="res://img/assets/herbe.png" id="41_1xagg"]
 
 [node name="Node2D" type="Node2D"]
+y_sort_enabled = true
 
 [node name="végé" type="Node" parent="."]
 

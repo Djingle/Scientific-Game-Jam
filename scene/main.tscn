@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dqq3un8rbqboe"]
+[gd_scene load_steps=6 format=3 uid="uid://dqq3un8rbqboe"]
 
 [ext_resource type="Script" uid="uid://cqk5qwlqyhp2s" path="res://script/main.gd" id="1_brvut"]
-[ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://camera_2d-test.gd" id="2_wp4xf"]
+[ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://scene/camera.gd" id="2_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://cgc7fjmwp6w0g" path="res://scene/gnome.tscn" id="3_wp4xf"]
 [ext_resource type="PackedScene" uid="uid://brkewjwagy8ch" path="res://scene/ui.tscn" id="4_0ha60"]
+[ext_resource type="PackedScene" uid="uid://bhmy50c783ps8" path="res://scene/quest.tscn" id="4_4j5ol"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_brvut")
@@ -12,17 +13,46 @@ script = ExtResource("1_brvut")
 position = Vector2(963, 512)
 script = ExtResource("2_wp4xf")
 
-[node name="GnomeCollection" type="Node2D" parent="."]
-y_sort_enabled = true
+[node name="QuestCollection" type="Node" parent="."]
 
-[node name="Gnome" parent="GnomeCollection" instance=ExtResource("3_wp4xf")]
-position = Vector2(1121, 479)
-speech = "Hello fella !"
+[node name="Quest" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("4_4j5ol")]
+speech_intro = "Regarde ! Eudes s’est cassé le [pied], il faudrait que tu lui files un coup de main…"
+speech_outro = "Félicitation !"
+quest_gnome = NodePath("../../Map/GnomeCollection/Gnome")
+draggable_gnomes = [NodePath("../../Map/GnomeCollection/Gnome2"), NodePath("../../Map/GnomeCollection/Gnome3")]
+goal_gnome = NodePath("../../Map/GnomeCollection/Gnome4")
+is_active = true
+next_quest = NodePath("../Quest2")
 
-[node name="Gnome2" parent="GnomeCollection" instance=ExtResource("3_wp4xf")]
-position = Vector2(1432, 507)
-speech = "Hi guys !"
+[node name="Quest2" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("4_4j5ol")]
+speech_intro = "Pol le Pizzaïolo a l’air désespéré. C’est vrai qu’il ne sait pas faire les [gâteaux]… Peux-tu lui trouver une solution ?"
+speech_outro = "Bravo !"
+quest_gnome = NodePath("../../Map/GnomeCollection/Gnome4")
+draggable_gnomes = [NodePath("../../Map/GnomeCollection/Gnome3")]
+goal_gnome = NodePath("../../Map/GnomeCollection/Gnome")
+next_quest = NodePath("../Quest")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("4_0ha60")]
+
+[node name="QuestEndTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Map" type="Node" parent="."]
+
+[node name="GnomeCollection" type="Node2D" parent="Map"]
+y_sort_enabled = true
+
+[node name="Gnome" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
+position = Vector2(201, 436)
+
+[node name="Gnome2" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
+position = Vector2(476, 433)
+
+[node name="Gnome3" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
+position = Vector2(790, 452)
+
+[node name="Gnome4" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
+position = Vector2(1187, 453)

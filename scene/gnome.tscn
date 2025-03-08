@@ -19,10 +19,5 @@ offset = Vector2(0, 500)
 position = Vector2(-5, 50)
 shape = SubResource("RectangleShape2D_8ytc4")
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
-one_shot = true
-
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
-[connection signal="timeout" from="Timer" to="." method="say"]
