@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://7yna3e8s0dvo"]
+[gd_scene load_steps=9 format=3 uid="uid://7yna3e8s0dvo"]
 
 [ext_resource type="Script" uid="uid://cqk5qwlqyhp2s" path="res://script/main.gd" id="1_8om6a"]
 [ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://scene/camera.gd" id="2_7qlk4"]
 [ext_resource type="PackedScene" uid="uid://cgc7fjmwp6w0g" path="res://scene/gnome.tscn" id="3_fit4s"]
+[ext_resource type="Script" uid="uid://d2q01amixa73k" path="res://script/gnome.gd" id="4_dq8sl"]
 [ext_resource type="PackedScene" uid="uid://brkewjwagy8ch" path="res://scene/ui.tscn" id="4_v1lcm"]
+[ext_resource type="Texture2D" uid="uid://2mm6mtqtdi72" path="res://img/gnome.png" id="5_q7jm1"]
 [ext_resource type="PackedScene" uid="uid://o3l1fkcyxfsa" path="res://map.tscn" id="6_fit4s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ytc4"]
+size = Vector2(87, 134)
 
 [node name="test_quest" type="Node"]
 script = ExtResource("1_8om6a")
@@ -16,8 +21,19 @@ script = ExtResource("2_7qlk4")
 [node name="Map" parent="." instance=ExtResource("6_fit4s")]
 position = Vector2(1, 0)
 
-[node name="Gnome" parent="Map" instance=ExtResource("3_fit4s")]
+[node name="Gnome" type="CharacterBody2D" parent="Map"]
 position = Vector2(990, 548)
+input_pickable = true
+script = ExtResource("4_dq8sl")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/Gnome"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_q7jm1")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Gnome"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
 
 [node name="Gnome2" parent="Map" instance=ExtResource("3_fit4s")]
 position = Vector2(312, 469)
@@ -35,3 +51,6 @@ position = Vector2(1131, 400)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" parent="CanvasLayer" instance=ExtResource("4_v1lcm")]
+
+[connection signal="mouse_entered" from="Map/Gnome" to="Map/Gnome" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/Gnome" to="Map/Gnome" method="_on_mouse_exited"]
