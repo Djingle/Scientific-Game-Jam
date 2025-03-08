@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://c6uaofb2lrckq"
-=======
-uid="uid://c6yg05lxm4lf8"
->>>>>>> 463de37982b161aeab7ce181e91772e67086826e
-path="res://.godot/imported/boutoncroix.png-caef2cf270a46c35c2cede8d34075695.ctex"
+uid="uid://c1hc40h8fn6vy"
+path="res://.godot/imported/Gnome pizzaiolo bien.png-b9cb6607db54ce478e995c841d0d1edf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/boutoncroix.png"
-dest_files=["res://.godot/imported/boutoncroix.png-caef2cf270a46c35c2cede8d34075695.ctex"]
+source_file="res://img/Gnome/Gnome pizzaiolo bien.png"
+dest_files=["res://.godot/imported/Gnome pizzaiolo bien.png-b9cb6607db54ce478e995c841d0d1edf.ctex"]
 
 [params]
 

@@ -2,20 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< HEAD
-uid="uid://c6uaofb2lrckq"
-=======
-uid="uid://c6yg05lxm4lf8"
->>>>>>> 463de37982b161aeab7ce181e91772e67086826e
-path="res://.godot/imported/boutoncroix.png-caef2cf270a46c35c2cede8d34075695.ctex"
+uid="uid://nmc1t0vniakw"
+path="res://.godot/imported/Gnome 7.png-9d949c4b781f7a8540edeab8845ddbf7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/boutoncroix.png"
-dest_files=["res://.godot/imported/boutoncroix.png-caef2cf270a46c35c2cede8d34075695.ctex"]
+source_file="res://img/Gnome/Gnome 7.png"
+dest_files=["res://.godot/imported/Gnome 7.png-9d949c4b781f7a8540edeab8845ddbf7.ctex"]
 
 [params]
 

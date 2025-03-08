@@ -2,7 +2,11 @@
 
 importer="font_data_dynamic"
 type="FontFile"
+<<<<<<< HEAD
 uid="uid://b85ac26hhhne4"
+=======
+uid="uid://dtlb0dkk8n5o2"
+>>>>>>> 463de37982b161aeab7ce181e91772e67086826e
 path="res://.godot/imported/Manjari-Thin.ttf-51538ce295f5bfcc128c2caf85f6c5c3.fontdata"
 
 [deps]
