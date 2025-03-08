@@ -8,7 +8,6 @@ class_name Quest
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Area2D.position = goal_gnome
 	$Sprite2D.hide()
 	pass # Replace with function body.
 
