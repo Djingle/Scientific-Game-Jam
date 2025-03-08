@@ -1,0 +1,295 @@
+[gd_scene load_steps=21 format=3 uid="uid://bctutbfiouq4p"]
+
+[ext_resource type="Script" uid="uid://cqk5qwlqyhp2s" path="res://script/main.gd" id="1_x4pkt"]
+[ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://scene/camera.gd" id="2_5187c"]
+[ext_resource type="PackedScene" uid="uid://bhmy50c783ps8" path="res://scene/quest.tscn" id="3_vmmii"]
+[ext_resource type="PackedScene" uid="uid://brkewjwagy8ch" path="res://scene/ui.tscn" id="4_ifly3"]
+[ext_resource type="PackedScene" uid="uid://hx167w8uhq4x" path="res://map.tscn" id="5_5187c"]
+[ext_resource type="Script" uid="uid://d2q01amixa73k" path="res://script/gnome.gd" id="6_ve4ad"]
+[ext_resource type="Texture2D" uid="uid://djkcwpro2ye6a" path="res://img/Gnome/Gnome jambe cassé.png" id="7_oghkn"]
+[ext_resource type="Texture2D" uid="uid://coxvdfid0sntw" path="res://img/Gnome/Gnome pizzaiolo pas bien.png" id="8_de2qy"]
+[ext_resource type="Texture2D" uid="uid://bbjxfxvoryjge" path="res://img/Gnome/Gnome guitare cassé.png" id="9_6jvul"]
+[ext_resource type="Texture2D" uid="uid://bhutrhnwsqlrk" path="res://img/Gnome/Gnome Maire.png" id="10_jmsr0"]
+[ext_resource type="Texture2D" uid="uid://2xe3a1aldpwp" path="res://img/Gnome/Gnome docteur.png" id="11_5mihj"]
+[ext_resource type="Texture2D" uid="uid://c1xd414c8rieo" path="res://img/Gnome/Gnome patissier.png" id="12_ml3jq"]
+[ext_resource type="Texture2D" uid="uid://b1ahvjytxrvvw" path="res://img/Gnome/Gnome musicien.png" id="13_3moud"]
+[ext_resource type="Texture2D" uid="uid://cj2fbk8jbvfcf" path="res://img/Gnome/Gnome aide maire.png" id="14_qu13g"]
+[ext_resource type="Texture2D" uid="uid://cs5gtninmu2de" path="res://img/Gnome/Gnome 1.png" id="15_7ixa7"]
+[ext_resource type="Texture2D" uid="uid://dgut336oi6kmr" path="res://img/Gnome/Gnome 2.png" id="16_i0ypu"]
+[ext_resource type="Texture2D" uid="uid://bopemffjl41g7" path="res://img/Gnome/Gnome 3.png" id="17_mpsdb"]
+[ext_resource type="Texture2D" uid="uid://d0m0yjxbx2tui" path="res://img/Gnome/Gnome 4.png" id="18_58x81"]
+[ext_resource type="Texture2D" uid="uid://c0si1thsc450s" path="res://img/Gnome/Gnome 5.png" id="19_pbpx2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ytc4"]
+size = Vector2(87, 134)
+
+[node name="test_quest" type="Node"]
+script = ExtResource("1_x4pkt")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(963, 512)
+zoom = Vector2(0.5, 0.5)
+script = ExtResource("2_5187c")
+
+[node name="QuestCollection" type="Node" parent="."]
+
+[node name="Quest" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("3_vmmii")]
+speech_intro = "Regarde ! Eudes s’est cassé le [pied], il faudrait que tu lui files un coup de main…"
+speech_outro = "Félicitation !"
+quest_gnome = NodePath("../../Map/GnomeCollection/pied")
+draggable_gnomes = [NodePath("../../Map/GnomeCollection/pizza"), NodePath("../../Map/GnomeCollection/guitare")]
+goal_gnome = NodePath("../../Map/GnomeCollection/maire")
+is_active = true
+next_quest = NodePath("../Quest2")
+
+[node name="Quest2" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("3_vmmii")]
+speech_intro = "Pol le Pizzaïolo a l’air désespéré. C’est vrai qu’il ne sait pas faire les [gâteaux]… Peux-tu lui trouver une solution ?"
+speech_outro = "Bravo !"
+quest_gnome = NodePath("../../Map/GnomeCollection/maire")
+draggable_gnomes = [NodePath("../../Map/GnomeCollection/guitare")]
+goal_gnome = NodePath("../../Map/GnomeCollection/pied")
+next_quest = NodePath("../Quest")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource("4_ifly3")]
+
+[node name="QuestEndTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="Map" parent="." instance=ExtResource("5_5187c")]
+
+[node name="GnomeCollection" type="Node2D" parent="Map"]
+y_sort_enabled = true
+
+[node name="pied" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(51, -2017)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/pied"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_oghkn")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/pied"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="pizza" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(-31, 2223)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/pizza"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_de2qy")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/pizza"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="guitare" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(-187, 394)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/guitare"]
+position = Vector2(2.33331, -1.33334)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_6jvul")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/guitare"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="maire" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(3291, 3)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/maire"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_jmsr0")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/maire"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="medecin" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(3659, -1284)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/medecin"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_5mihj")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/medecin"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="patisse" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(957, -589)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/patisse"]
+position = Vector2(0, 24.6667)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("12_ml3jq")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/patisse"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="luthier" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(-1447, -1395)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/luthier"]
+position = Vector2(0, 24.6667)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_3moud")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/luthier"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="orthopho" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(-2310, 556)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/orthopho"]
+position = Vector2(0, 24.6667)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("14_qu13g")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/orthopho"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="randomo1" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(2617, 1483)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/randomo1"]
+position = Vector2(0, 24.6667)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("15_7ixa7")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/randomo1"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="randomo2" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(-393, -1202)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/randomo2"]
+position = Vector2(0, 24.6667)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("16_i0ypu")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/randomo2"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="randomo3" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(1679, 372)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/randomo3"]
+position = Vector2(0, 24.6667)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("17_mpsdb")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/randomo3"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="randomo4" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(1235, 1495)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/randomo4"]
+position = Vector2(0, 24.6667)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("18_58x81")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/randomo4"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[node name="randomo5" type="CharacterBody2D" parent="Map/GnomeCollection"]
+position = Vector2(2136, -1830)
+scale = Vector2(3, 3)
+input_pickable = true
+script = ExtResource("6_ve4ad")
+
+[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/randomo5"]
+position = Vector2(0, 24.6667)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("19_pbpx2")
+offset = Vector2(0, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/randomo5"]
+position = Vector2(-5, 50)
+shape = SubResource("RectangleShape2D_8ytc4")
+
+[connection signal="mouse_entered" from="Map/GnomeCollection/pied" to="Map/GnomeCollection/pied" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/pied" to="Map/GnomeCollection/pied" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/pizza" to="Map/GnomeCollection/pizza" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/pizza" to="Map/GnomeCollection/pizza" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/guitare" to="Map/GnomeCollection/guitare" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/guitare" to="Map/GnomeCollection/guitare" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/maire" to="Map/GnomeCollection/maire" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/maire" to="Map/GnomeCollection/maire" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/medecin" to="Map/GnomeCollection/medecin" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/medecin" to="Map/GnomeCollection/medecin" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/patisse" to="Map/GnomeCollection/patisse" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/patisse" to="Map/GnomeCollection/patisse" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/luthier" to="Map/GnomeCollection/luthier" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/luthier" to="Map/GnomeCollection/luthier" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/orthopho" to="Map/GnomeCollection/orthopho" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/orthopho" to="Map/GnomeCollection/orthopho" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/randomo1" to="Map/GnomeCollection/randomo1" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/randomo1" to="Map/GnomeCollection/randomo1" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/randomo2" to="Map/GnomeCollection/randomo2" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/randomo2" to="Map/GnomeCollection/randomo2" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/randomo3" to="Map/GnomeCollection/randomo3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/randomo3" to="Map/GnomeCollection/randomo3" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/randomo4" to="Map/GnomeCollection/randomo4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/randomo4" to="Map/GnomeCollection/randomo4" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="Map/GnomeCollection/randomo5" to="Map/GnomeCollection/randomo5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Map/GnomeCollection/randomo5" to="Map/GnomeCollection/randomo5" method="_on_mouse_exited"]

@@ -8,13 +8,13 @@ var player_control : bool = true
 signal movement_done()
  
 func _ready() -> void:
-	screen_size = DisplayServer.screen_get_size()
+	screen_size = DisplayServer.screen_get_size() * 2
  
 func _process(delta: float) -> void:
 	if player_control:
 		var direction : Vector2 = Vector2(0, 0)
 	 
-		if Input.is_action_pressed("left") or get_local_mouse_position().x + screen_size.x/2 < screen_size.x / 100:
+		if Input.is_action_pressed("left") or get_local_mouse_position().x < screen_size.x / 100 - screen_size.x / 2:
 			direction.x -= camera_speed
 		if Input.is_action_pressed("right") or get_local_mouse_position().x + screen_size.x/2 > screen_size.x - screen_size.x / 100:
 			direction.x += camera_speed
