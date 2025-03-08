@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 var gnome_array : Array[Gnome] = []
 

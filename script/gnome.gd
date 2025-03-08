@@ -14,13 +14,14 @@ func _process(_delta: float) -> void:
 		tween.tween_property(self, "scale", Vector2(1, 1), 0.05)
 		z_index = 0
 	if dragging:
-		global_position = get_global_mouse_position()
+		var tween = create_tween()
+		tween.tween_property(self, "global_position", get_global_mouse_position(), 0.05)
 		
 func drag() -> void:
 	var tween = create_tween()
 	tween.set_parallel()
 	tween.tween_property(self, "position", get_global_mouse_position(), 0.05)
-	tween.tween_property(self, "scale", Vector2(1.2, 1.2), 0.05)
+	tween.tween_property(self, "scale", Vector2(1.75, 1.75), 0.05)
 	await tween.finished
 	dragging = true
 	z_index = 1

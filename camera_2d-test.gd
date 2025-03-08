@@ -16,6 +16,3 @@ func _process(delta: float) -> void:
 		direction.y += camera_speed
 
 	position += direction.normalized() * camera_speed * delta
-	
-	if Input.is_action_just_pressed("escape"):
-		get_tree().quit()
