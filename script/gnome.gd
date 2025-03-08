@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 class_name Gnome
 
+@export var gnome_size : float = 1.0
 var dragging : bool = false
 var mouse_pos : Vector2 = Vector2.ZERO
 var previous_pos : Vector2 = Vector2.ZERO
@@ -18,7 +19,7 @@ func _process(_delta: float) -> void:
 			dragging = false
 			var tween = create_tween()
 			tween.set_parallel()
-			tween.tween_property(self, "scale", Vector2(2, 2), 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
+			tween.tween_property(self, "scale", Vector2(gnome_size, gnome_size), 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
 			tween.tween_property(self, "position", position + (position - previous_pos) * 20, 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
 			immune_to_pickup = true
 			await tween.finished
@@ -40,7 +41,7 @@ func drag() -> void:
 		var tween = create_tween()
 		tween.set_parallel()
 		tween.tween_property(self, "position", get_global_mouse_position(), 0.05)
-		tween.tween_property(self, "scale", Vector2(scale.x * 1.5, scale.y * 1.5), 0.05)
+		tween.tween_property(self, "scale", Vector2(gnome_size * 1.5, gnome_size * 1.5), 0.05)
 		await tween.finished
 		dragging = true
 		z_index = 10
