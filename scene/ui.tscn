@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://brkewjwagy8ch"]
+[gd_scene load_steps=5 format=3 uid="uid://brkewjwagy8ch"]
 
 [ext_resource type="Script" uid="uid://ci1i4xjqehuxe" path="res://script/ui.gd" id="1_onfsl"]
+[ext_resource type="Texture2D" uid="uid://defnmscuiba74" path="res://icon.svg" id="2_s2f8l"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_onfsl"]
 action = &"escape"
@@ -69,7 +70,7 @@ anchor_right = 0.95
 anchor_bottom = 0.9
 offset_right = 40.0
 offset_bottom = 40.0
-color = Color(0.501407, 0.501406, 0.501406, 1)
+color = Color(0.501961, 0.501961, 0.501961, 1)
 
 [node name="DialogLabel" type="Label" parent="DialogText"]
 layout_mode = 1
@@ -79,5 +80,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="DialogCloseButton" type="TextureButton" parent="DialogText"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+texture_normal = ExtResource("2_s2f8l")
 
 [connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="DialogText/DialogCloseButton" to="." method="_on_dialog_close_button_pressed"]
