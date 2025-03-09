@@ -29,6 +29,11 @@ func _process(_delta: float) -> void:
 			#If gnome is being dragged, it "falls to the ground" and is immune to being picked up during the animation
 			if dragging:
 				dragging = false
+				if position.distance_to(previous_pos) < 50:
+					$AudioPlayer.stream = drop_sounds[randi_range(0, drop_sounds.size()-1)]
+				else:
+					$AudioPlayer.stream = throw_sounds[randi_range(0, throw_sounds.size()-1)]
+				$AudioPlayer.play()
 				var tween = create_tween()
 				tween.set_parallel()
 				tween.tween_property(self, "scale", Vector2(gnome_size, gnome_size), 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
@@ -37,14 +42,11 @@ func _process(_delta: float) -> void:
 				await tween.finished
 				immune_to_pickup = false
 				z_index = 1
+					
 		#When being dragged, it will follow the mouse
 		if dragging:
 			var tween = create_tween()
 			tween.tween_property(self, "global_position", get_global_mouse_position(), 0.05)
-		if mouse_pos != Vector2.ZERO and mouse_pos.distance_to(get_global_mouse_position()) > 1:
-			$Timer.stop()
-			drag()
-			mouse_pos = Vector2.ZERO
 		rotation = clamp((position.x - previous_pos.x)*0.0125, -1, 1)
 		previous_pos = position
 		
@@ -57,6 +59,8 @@ func drag() -> void:
 		await tween.finished
 		dragging = true
 		z_index = 10
+		$AudioPlayer.stream = grab_sounds[randi_range(0, grab_sounds.size()-1)]
+		$AudioPlayer.play()
 
 func _on_mouse_entered() -> void:
 	emit_signal("hover", self)

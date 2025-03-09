@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cgc7fjmwp6w0g"]
+[gd_scene load_steps=74 format=3 uid="uid://cgc7fjmwp6w0g"]
 
 [ext_resource type="Script" uid="uid://d2q01amixa73k" path="res://script/gnome.gd" id="1_ats4t"]
 [ext_resource type="AudioStream" uid="uid://dy17tv3v63462" path="res://audio/final_sfx/Drop/SFX_GnomePoser-001.wav" id="2_0focw"]
@@ -16,6 +16,62 @@
 [ext_resource type="AudioStream" uid="uid://ddvox63cvryiy" path="res://audio/final_sfx/Drop/SFX_GnomePoser-012.wav" id="13_3vtkk"]
 [ext_resource type="AudioStream" uid="uid://cul4o4vdaq3qa" path="res://audio/final_sfx/Drop/SFX_GnomePoser-013.wav" id="14_mj31m"]
 [ext_resource type="AudioStream" uid="uid://cor08ic7agffg" path="res://audio/final_sfx/Drop/SFX_GnomePoser-014.wav" id="15_cynxy"]
+[ext_resource type="AudioStream" uid="uid://dkwnvttth8v7d" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-001.wav" id="16_4dywj"]
+[ext_resource type="AudioStream" uid="uid://s5hmh4aqdkx4" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-002.wav" id="17_g63pb"]
+[ext_resource type="AudioStream" uid="uid://duej3cdkcduih" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-003.wav" id="18_6cc3p"]
+[ext_resource type="AudioStream" uid="uid://bmnf8cqprcva7" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-004.wav" id="19_m5qbm"]
+[ext_resource type="AudioStream" uid="uid://c8252eoappawm" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-005.wav" id="20_5wbis"]
+[ext_resource type="AudioStream" uid="uid://cwmguxcfmhhyp" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-006.wav" id="21_nhcp2"]
+[ext_resource type="AudioStream" uid="uid://bkfxwnipj0dcg" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-007.wav" id="22_1mhtf"]
+[ext_resource type="AudioStream" uid="uid://bpg8suvgello3" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-008.wav" id="23_7cc05"]
+[ext_resource type="AudioStream" uid="uid://jtslrlt5x0e5" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-009.wav" id="24_igipo"]
+[ext_resource type="AudioStream" uid="uid://c2bdq6atwqplg" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-010.wav" id="25_2kvts"]
+[ext_resource type="AudioStream" uid="uid://32iexi63qr8x" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-011.wav" id="26_kcl5r"]
+[ext_resource type="AudioStream" uid="uid://bjmg7hskgpp31" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-012.wav" id="27_y71fh"]
+[ext_resource type="AudioStream" uid="uid://bwi4v8frxconk" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-013.wav" id="28_kf201"]
+[ext_resource type="AudioStream" uid="uid://b5lvydxs5uyu5" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-014.wav" id="29_jhcaq"]
+[ext_resource type="AudioStream" uid="uid://bhims1r4t1ncp" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-015.wav" id="30_jq47m"]
+[ext_resource type="AudioStream" uid="uid://ktkeglmtbfdn" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-017.wav" id="31_1t2t6"]
+[ext_resource type="AudioStream" uid="uid://b5437sj3t8fqo" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-018.wav" id="32_f8id6"]
+[ext_resource type="AudioStream" uid="uid://8nec4v7p8s2p" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-019.wav" id="33_rcs5u"]
+[ext_resource type="AudioStream" uid="uid://wka2l724ipv4" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-020.wav" id="34_7otgn"]
+[ext_resource type="AudioStream" uid="uid://uigfiv25fbpq" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-021.wav" id="35_v2c3e"]
+[ext_resource type="AudioStream" uid="uid://c83bqngkvj3jf" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-022.wav" id="36_utxsy"]
+[ext_resource type="AudioStream" uid="uid://d0mjlulxlufw7" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-023.wav" id="37_fhw67"]
+[ext_resource type="AudioStream" uid="uid://bav57muyqxcfd" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-024.wav" id="38_6ptvj"]
+[ext_resource type="AudioStream" uid="uid://b3kett1p22h1x" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-025.wav" id="39_qeppe"]
+[ext_resource type="AudioStream" uid="uid://bqrk7bfualvaq" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-026.wav" id="40_mouy1"]
+[ext_resource type="AudioStream" uid="uid://cy41ei8qwyrp4" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-027.wav" id="41_gvcb4"]
+[ext_resource type="AudioStream" uid="uid://cm873uyukbu0b" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-028.wav" id="42_t8e2v"]
+[ext_resource type="AudioStream" uid="uid://d140jnavngl6d" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-029.wav" id="43_0ktss"]
+[ext_resource type="AudioStream" uid="uid://b132tb8iofh1k" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-030.wav" id="44_klwgb"]
+[ext_resource type="AudioStream" uid="uid://cjdx82rjkq0dy" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-031.wav" id="45_mop4w"]
+[ext_resource type="AudioStream" uid="uid://c3p80dm2eddjx" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-032.wav" id="46_oi70q"]
+[ext_resource type="AudioStream" uid="uid://dpxvsfbqayc8n" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-033.wav" id="47_nfrm5"]
+[ext_resource type="AudioStream" uid="uid://2rw1ve6i0qyj" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-034.wav" id="48_4laj6"]
+[ext_resource type="AudioStream" uid="uid://ca6umwl26pskh" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-035.wav" id="49_vk5oh"]
+[ext_resource type="AudioStream" uid="uid://djmsjf6uiy5yx" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-036.wav" id="50_t4h3c"]
+[ext_resource type="AudioStream" uid="uid://fn5qa825se7g" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-037.wav" id="51_5h0b8"]
+[ext_resource type="AudioStream" uid="uid://buxj7tamb7d63" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-038.wav" id="52_6jpad"]
+[ext_resource type="AudioStream" uid="uid://brtl25cf0y473" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-039.wav" id="53_43sdx"]
+[ext_resource type="AudioStream" uid="uid://2js2bhjswfoi" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-040.wav" id="54_oim4c"]
+[ext_resource type="AudioStream" uid="uid://dhhhw0wju2k2b" path="res://audio/final_sfx/Pickup/SFX_GnomePrendre-041.wav" id="55_ak2qi"]
+[ext_resource type="AudioStream" uid="uid://rptuuk2ohkkg" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-001.wav" id="56_f8id6"]
+[ext_resource type="AudioStream" uid="uid://oi6iaa71vpts" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-002.wav" id="57_rcs5u"]
+[ext_resource type="AudioStream" uid="uid://db5r4ob4m6dnl" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-003.wav" id="58_7otgn"]
+[ext_resource type="AudioStream" uid="uid://drc2e7qiox8nl" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-004.wav" id="59_v2c3e"]
+[ext_resource type="AudioStream" uid="uid://bg7oawjmtckly" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-005.wav" id="60_utxsy"]
+[ext_resource type="AudioStream" uid="uid://cnc7e46fybe1p" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-006.wav" id="61_fhw67"]
+[ext_resource type="AudioStream" uid="uid://d75gq23nklwg" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-007.wav" id="62_6ptvj"]
+[ext_resource type="AudioStream" uid="uid://c8cxe1bfqh1d4" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-008.wav" id="63_qeppe"]
+[ext_resource type="AudioStream" uid="uid://c3nxlff1oqduy" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-009.wav" id="64_mouy1"]
+[ext_resource type="AudioStream" uid="uid://cyn21e6t4nnvl" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-010.wav" id="65_gvcb4"]
+[ext_resource type="AudioStream" uid="uid://dsujy3twtchug" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-011.wav" id="66_t8e2v"]
+[ext_resource type="AudioStream" uid="uid://ckj2k7dfvp083" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-012.wav" id="67_0ktss"]
+[ext_resource type="AudioStream" uid="uid://dbwy0hn6uq52n" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-013.wav" id="68_klwgb"]
+[ext_resource type="AudioStream" uid="uid://dktv4u0bli52f" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-014.wav" id="69_mop4w"]
+[ext_resource type="AudioStream" uid="uid://djlw7m6dqfu14" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-015.wav" id="70_oi70q"]
+[ext_resource type="AudioStream" uid="uid://bl1222xaysqqo" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-016.wav" id="71_nfrm5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uks88"]
 radius = 15.0
@@ -26,7 +82,8 @@ z_index = 1
 input_pickable = true
 script = ExtResource("1_ats4t")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("2_0focw"), ExtResource("3_c6q0c"), ExtResource("4_y01ci"), ExtResource("5_i3f8j"), ExtResource("6_2mnkx"), ExtResource("7_oa77q"), ExtResource("8_os44y"), ExtResource("9_j4lsu"), ExtResource("10_muwsb"), ExtResource("11_nt8jv"), ExtResource("12_6iehu"), ExtResource("13_3vtkk"), ExtResource("14_mj31m"), ExtResource("15_cynxy")])
-drop_sounds = Array[AudioStreamWAV]([null, null, null])
+drop_sounds = Array[AudioStreamWAV]([ExtResource("16_4dywj"), ExtResource("17_g63pb"), ExtResource("18_6cc3p"), ExtResource("19_m5qbm"), ExtResource("20_5wbis"), ExtResource("21_nhcp2"), ExtResource("22_1mhtf"), ExtResource("23_7cc05"), ExtResource("24_igipo"), ExtResource("25_2kvts"), ExtResource("26_kcl5r"), ExtResource("27_y71fh"), ExtResource("27_y71fh"), ExtResource("28_kf201"), ExtResource("29_jhcaq"), ExtResource("30_jq47m"), ExtResource("31_1t2t6"), ExtResource("32_f8id6"), ExtResource("33_rcs5u"), ExtResource("34_7otgn"), ExtResource("35_v2c3e"), ExtResource("36_utxsy"), ExtResource("37_fhw67"), ExtResource("38_6ptvj"), ExtResource("39_qeppe"), ExtResource("40_mouy1"), ExtResource("41_gvcb4"), ExtResource("42_t8e2v"), ExtResource("43_0ktss"), ExtResource("44_klwgb"), ExtResource("45_mop4w"), ExtResource("46_oi70q"), ExtResource("47_nfrm5"), ExtResource("48_4laj6"), ExtResource("49_vk5oh"), ExtResource("50_t4h3c"), ExtResource("51_5h0b8"), ExtResource("52_6jpad"), ExtResource("53_43sdx"), ExtResource("54_oim4c"), ExtResource("55_ak2qi")])
+throw_sounds = Array[AudioStreamWAV]([ExtResource("56_f8id6"), ExtResource("57_rcs5u"), ExtResource("58_7otgn"), ExtResource("59_v2c3e"), ExtResource("60_utxsy"), ExtResource("61_fhw67"), ExtResource("62_6ptvj"), ExtResource("63_qeppe"), ExtResource("64_mouy1"), ExtResource("65_gvcb4"), ExtResource("66_t8e2v"), ExtResource("67_0ktss"), ExtResource("68_klwgb"), ExtResource("69_mop4w"), ExtResource("70_oi70q"), ExtResource("71_nfrm5")])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
@@ -37,6 +94,7 @@ position = Vector2(-3, -2)
 shape = SubResource("CapsuleShape2D_uks88")
 
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+volume_db = 5.0
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
