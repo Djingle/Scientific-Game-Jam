@@ -4,6 +4,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$TextureRect/ButtonBack.hide()
+	$MenuTheme.play()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -12,6 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_jouer_pressed() -> void:
+	$MenuTheme.stop()
 	$AudioStreamPlayer.play()
 	get_tree().change_scene_to_file("res://test_quest.tscn")
 
