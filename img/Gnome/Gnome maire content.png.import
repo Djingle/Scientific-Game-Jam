@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://b788scfptwrlq"
+=======
+uid="uid://bulei7wjs7cmv"
+>>>>>>> e3feffe508a575c54bbc8742d3704c535a41946f
 path="res://.godot/imported/Gnome maire content.png-f2af38ac53133c40ed680be60ea88a60.ctex"
 metadata={
 "vram_texture": false
