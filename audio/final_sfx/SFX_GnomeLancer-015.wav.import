@@ -2,11 +2,7 @@
 
 importer="wav"
 type="AudioStreamWAV"
-<<<<<<< HEAD
-uid="uid://t1dmsbrdy6mj"
-=======
-uid="uid://djlw7m6dqfu14"
->>>>>>> 529518768809fcb6b56bdbdefea322cd2819b3ad
+uid="uid://c70fukv21h8gq"
 path="res://.godot/imported/SFX_GnomeLancer-015.wav-7e9889c7122387bbeb35776e24dc862f.sample"
 
 [deps]
