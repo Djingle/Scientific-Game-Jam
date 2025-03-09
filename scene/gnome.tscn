@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://cgc7fjmwp6w0g"]
+[gd_scene load_steps=79 format=3 uid="uid://cgc7fjmwp6w0g"]
 
 [ext_resource type="Script" uid="uid://d2q01amixa73k" path="res://script/gnome.gd" id="1_ats4t"]
 [ext_resource type="AudioStream" uid="uid://dy17tv3v63462" path="res://audio/final_sfx/Drop/SFX_GnomePoser-001.wav" id="2_0focw"]
@@ -103,6 +103,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_1t2t6"]
 resource_name = "idle"
@@ -133,8 +145,57 @@ tracks/1/keys = {
 "values": [0.0, 30.0]
 }
 
+[sub_resource type="Animation" id="Animation_rcs5u"]
+resource_name = "Pick up"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.72), Vector2(1, 1.28)]
+}
+
+[sub_resource type="Animation" id="Animation_7otgn"]
+resource_name = "Drag"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1.28), Vector2(1, 1.12), Vector2(1, 1.28)]
+}
+
+[sub_resource type="Animation" id="Animation_v2c3e"]
+resource_name = "Drop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1.28), Vector2(1, 0.76), Vector2(1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rcs5u"]
 _data = {
+&"Drag": SubResource("Animation_7otgn"),
+&"Drop": SubResource("Animation_v2c3e"),
+&"Pick up": SubResource("Animation_rcs5u"),
 &"RESET": SubResource("Animation_f8id6"),
 &"idle": SubResource("Animation_1t2t6")
 }
