@@ -173,7 +173,6 @@ y_sort_enabled = true
 
 [node name="QuestGiver1" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(43, -1860)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 cant_be_caught = true
 sprite = ExtResource("7_oghkn")
@@ -183,7 +182,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="QuestGiver2" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(804, 1659)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 cant_be_caught = true
 sprite = ExtResource("8_de2qy")
@@ -193,7 +191,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="QuestGiver3" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-210, 490)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 cant_be_caught = true
 sprite = ExtResource("9_6jvul")
@@ -203,7 +200,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="QuestGiver4" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(3287, 159)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 cant_be_caught = true
 sprite = ExtResource("10_jmsr0")
@@ -213,7 +209,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="QuestHelper1" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(3655, -1126)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("11_5mihj")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -221,7 +216,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="QuestHelper2" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(950, -432)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("12_ml3jq")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -229,7 +223,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="QuestHelper3" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-1460, -1244)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("13_3moud")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -237,7 +230,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="QuestHelper4" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-2325, 707)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("14_qu13g")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -245,7 +237,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="Villager1" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(2607, 1632)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("15_7ixa7")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -253,7 +244,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="Villager2" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-404, -1017)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("16_i0ypu")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -261,7 +251,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="Villager3" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(1664, 526)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("17_mpsdb")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -269,7 +258,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="Villager4" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-1288, 2307)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("18_58x81")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -277,7 +265,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="Villager5" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(2122, -1680)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("19_pbpx2")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -285,7 +272,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="Villager6" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(3634, -2205)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("20_6jvul")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -293,7 +279,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="Villager8" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-2453, -2440)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("22_5mihj")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -301,7 +286,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="Villager9" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(223, -1236)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("78_6w1up")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -309,7 +293,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="Villager10" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(1018, 85)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("79_pkerm")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
@@ -317,7 +300,6 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 
 [node name="EndInvisiGnome" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(551, -1854)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 cant_be_caught = true
 sprite = SubResource("CompressedTexture2D_6jvul")

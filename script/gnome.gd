@@ -41,6 +41,8 @@ func _process(_delta: float) -> void:
 				else:
 					$AudioPlayer.stream = throw_sounds[randi_range(0, throw_sounds.size()-1)]
 				$AudioPlayer.play()
+				$AnimationPlayer.stop()
+				$AnimationPlayer.play("idle")
 				var tween = create_tween()
 				tween.set_parallel()
 				tween.tween_property(self, "scale", Vector2(gnome_size, gnome_size), 1).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BOUNCE)
@@ -69,6 +71,8 @@ func drag() -> void:
 		z_index = 10
 		$AudioPlayer.stream = grab_sounds[randi_range(0, grab_sounds.size()-1)]
 		$AudioPlayer.play()
+		$AnimationPlayer.stop()
+		$AnimationPlayer.play("Drag")
 	else :
 		var tween = create_tween()
 		tween.tween_property(self, "scale", Vector2(gnome_size, gnome_size * .8), .05)
