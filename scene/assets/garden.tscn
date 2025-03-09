@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyn55fbykmumc"]
+
+[ext_resource type="Texture2D" uid="uid://bkldb7wlrfske" path="res://img/assets/potager.png" id="1_4re8t"]
+
+[node name="Garden" type="Sprite2D"]
+scale = Vector2(1.234, 1.234)
+texture = ExtResource("1_4re8t")
+offset = Vector2(0, 5)

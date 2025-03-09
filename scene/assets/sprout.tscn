@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://xf4e2vvy5jeg"]
+
+[ext_resource type="Texture2D" uid="uid://tuqjn8h71qrt" path="res://img/assets/pousse.png" id="1_5wccp"]
+
+[node name="Sprout" type="Sprite2D"]
+texture = ExtResource("1_5wccp")

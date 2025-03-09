@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvyt42m15u5v1"]
+
+[ext_resource type="Texture2D" uid="uid://cqpsrqqog7dxk" path="res://img/assets/buisson_fougere.png" id="1_jujs8"]
+
+[node name="Fern" type="Sprite2D"]
+texture = ExtResource("1_jujs8")
+offset = Vector2(0, 80)

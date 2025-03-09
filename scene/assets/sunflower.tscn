@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1f54jbqsecoc"]
+
+[ext_resource type="Texture2D" uid="uid://mirmef758oc8" path="res://img/assets/tournesol.png" id="1_xsw71"]
+
+[node name="Sunflower" type="Sprite2D"]
+texture = ExtResource("1_xsw71")
+offset = Vector2(0, -20)

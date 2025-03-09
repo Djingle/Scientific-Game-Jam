@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://wk7q17u7lqe7"]
+
+[ext_resource type="Texture2D" uid="uid://prxgcko4j4uc" path="res://img/assets/tabouret.png" id="1_3qe40"]
+
+[node name="Stool" type="Sprite2D"]
+texture = ExtResource("1_3qe40")
+offset = Vector2(0, 40)

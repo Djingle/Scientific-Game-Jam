@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://vqn3cgue2hhy"]
+
+[ext_resource type="Texture2D" uid="uid://634kymmq2aik" path="res://img/assets/chanterelle.png" id="1_8nbi5"]
+
+[node name="MushroomFlat" type="Sprite2D"]
+texture = ExtResource("1_8nbi5")
+offset = Vector2(0, 55)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b51665blw23xd"]
+
+[ext_resource type="Texture2D" uid="uid://d1dwecv3rca8m" path="res://img/assets/pommier.png" id="1_rsrdg"]
+
+[node name="AppleTree" type="Sprite2D"]
+scale = Vector2(1.426, 1.426)
+texture = ExtResource("1_rsrdg")
+offset = Vector2(0, -150)

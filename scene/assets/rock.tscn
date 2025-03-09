@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdkbvd3n8c7jw"]
+
+[ext_resource type="Texture2D" uid="uid://cg4noi7xmtygi" path="res://img/assets/rocher.png" id="1_osvvu"]
+
+[node name="Rock" type="Sprite2D"]
+texture = ExtResource("1_osvvu")
+offset = Vector2(0, 31)
