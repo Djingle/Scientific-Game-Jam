@@ -25,6 +25,9 @@ signal deselect(gnome : Gnome)
 func _ready() -> void:
 	scale = Vector2(gnome_size, gnome_size)
 	$Sprite2D.texture = sprite
+	var animation_offset : float = randf_range(0, 3)
+	$AnimationPlayer.play("idle")
+	$AnimationPlayer.seek(animation_offset)
 
 func _process(_delta: float) -> void:
 	if !Engine.is_editor_hint():
