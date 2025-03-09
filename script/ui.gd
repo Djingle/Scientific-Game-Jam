@@ -39,7 +39,7 @@ func display_text(speech : String):
 		$DialogText/DialogLabel.text = speech
 		$DialogText/DialogLabel.visible_ratio = 0
 		var tween = create_tween()
-		tween.tween_property($DialogText/DialogLabel, "visible_ratio", 1, 0.03 * speech.length())
+		tween.tween_property($DialogText/DialogLabel, "visible_ratio", 1, 0.02 * speech.length())
 		await tween.finished
 		emit_signal("text_written")
 		is_writing = false
