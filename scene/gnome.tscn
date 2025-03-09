@@ -1,8 +1,7 @@
-[gd_scene load_steps=74 format=3 uid="uid://cgc7fjmwp6w0g"]
+[gd_scene load_steps=73 format=3 uid="uid://cgc7fjmwp6w0g"]
 
 [ext_resource type="Script" uid="uid://d2q01amixa73k" path="res://script/gnome.gd" id="1_ats4t"]
 [ext_resource type="AudioStream" uid="uid://dy17tv3v63462" path="res://audio/final_sfx/Drop/SFX_GnomePoser-001.wav" id="2_0focw"]
-[ext_resource type="Texture2D" uid="uid://cs5gtninmu2de" path="res://img/Gnome/Gnome 1.png" id="2_ats4t"]
 [ext_resource type="AudioStream" uid="uid://bxy501y1gjn73" path="res://audio/final_sfx/Drop/SFX_GnomePoser-002.wav" id="3_c6q0c"]
 [ext_resource type="AudioStream" uid="uid://csj4nepcxons8" path="res://audio/final_sfx/Drop/SFX_GnomePoser-003.wav" id="4_y01ci"]
 [ext_resource type="AudioStream" uid="uid://dplajihbvf0op" path="res://audio/final_sfx/Drop/SFX_GnomePoser-004.wav" id="5_i3f8j"]
@@ -87,7 +86,6 @@ throw_sounds = Array[AudioStreamWAV]([ExtResource("56_f8id6"), ExtResource("57_r
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_ats4t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -2)

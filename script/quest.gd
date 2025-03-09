@@ -26,6 +26,7 @@ func _process(_delta: float) -> void:
 			succeded = false
 	if succeded and is_active: 
 		emit_signal("quest_completed", self)
+		quest_gnome.victory()
 		is_active = false
 
 func start_quest() -> void:
