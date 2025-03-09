@@ -1,6 +1,7 @@
 extends Node
 
 var gnome_array : Array[Gnome] = []
+var begin : bool = false
 
 func _ready() -> void:
 	for child : Gnome in $Map/GnomeCollection.get_children():
@@ -35,8 +36,10 @@ func gnome_talking(speech : String) -> void:
 	$CanvasLayer/UI.display_text(speech)
 
 func quest_begin():
-	var quest : Quest = $QuestCollection/Quest
-	quest_start($QuestCollection/Quest, $QuestCollection/Quest.quest_gnome.global_position)
+	if !begin:
+		begin = true
+		quest_start($QuestCollection/Quest, $QuestCollection/Quest.quest_gnome.global_position)
+		$QuestCollection/Quest.is_active = true
 
 func quest_start(quest : Quest, pos : Vector2) -> void:
 	$Camera.move_to(pos)

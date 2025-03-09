@@ -1,4 +1,4 @@
-[gd_scene load_steps=81 format=3 uid="uid://cgc7fjmwp6w0g"]
+[gd_scene load_steps=80 format=3 uid="uid://cgc7fjmwp6w0g"]
 
 [ext_resource type="Script" uid="uid://d2q01amixa73k" path="res://script/gnome.gd" id="1_ats4t"]
 [ext_resource type="AudioStream" uid="uid://dy17tv3v63462" path="res://audio/final_sfx/Drop/SFX_GnomePoser-001.wav" id="2_0focw"]
@@ -72,7 +72,6 @@
 [ext_resource type="AudioStream" uid="uid://djlw7m6dqfu14" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-015.wav" id="70_oi70q"]
 [ext_resource type="AudioStream" uid="uid://bl1222xaysqqo" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-016.wav" id="71_nfrm5"]
 [ext_resource type="AudioStream" uid="uid://bmccojddtociy" path="res://audio/final_sfx/UI/SFX_WinQuest.wav" id="72_f8id6"]
-[ext_resource type="Texture2D" uid="uid://dv84sk721aew3" path="res://img/Gnome/Gnome 8.png" id="74_v2c3e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uks88"]
 radius = 15.0
@@ -238,7 +237,6 @@ victory_sound = ExtResource("72_f8id6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("74_v2c3e")
 offset = Vector2(0, -20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

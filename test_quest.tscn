@@ -157,8 +157,8 @@ color = Color(0, 0, 0, 0)
 [node name="EndScreen" type="TextureRect" parent="CanvasLayer"]
 visible = false
 modulate = Color(1, 1, 1, 0)
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1980.0
+offset_bottom = 1080.0
 texture = ExtResource("5_qhlk3")
 
 [node name="QuestEndTimer" type="Timer" parent="."]
