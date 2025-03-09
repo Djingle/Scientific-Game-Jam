@@ -45,7 +45,7 @@ func display_text(speech : String):
 		is_writing = false
 	
 func _on_menu_button_pressed() -> void:
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://scene/accueil.tscn")
 
 func _on_dialog_close_button_pressed() -> void:
 	$AudioStreamPlayer.play()
