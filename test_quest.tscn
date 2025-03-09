@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cn0c6wg873m6u"]
+[gd_scene load_steps=24 format=3 uid="uid://bctutbfiouq4p"]
 
 [ext_resource type="Script" uid="uid://cqk5qwlqyhp2s" path="res://script/main.gd" id="1_x4pkt"]
 [ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://scene/camera.gd" id="2_5187c"]
@@ -20,8 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://d0m0yjxbx2tui" path="res://img/Gnome/Gnome 4.png" id="18_58x81"]
 [ext_resource type="Texture2D" uid="uid://c0si1thsc450s" path="res://img/Gnome/Gnome 5.png" id="19_pbpx2"]
 [ext_resource type="Texture2D" uid="uid://pxr86qely4qp" path="res://img/Gnome/Gnome 6.png" id="20_6jvul"]
-[ext_resource type="Texture2D" uid="uid://etb86xcr7nas" path="res://img/Gnome/Gnome 7.png" id="21_jmsr0"]
-[ext_resource type="Texture2D" uid="uid://dl6312tdv8ykj" path="res://img/Gnome/Gnome 8.png" id="22_5mihj"]
+[ext_resource type="Texture2D" uid="uid://dd0glspha5spp" path="res://img/Gnome/Gnome 7.png" id="21_jmsr0"]
+[ext_resource type="Texture2D" uid="uid://dv84sk721aew3" path="res://img/Gnome/Gnome 8.png" id="22_5mihj"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6jvul"]
 
