@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=4 uid="uid://o3l1fkcyxfsa"]
+[gd_scene load_steps=52 format=4 uid="uid://o3l1fkcyxfsa"]
 
 [ext_resource type="Texture2D" uid="uid://trr2y2qhq3w4" path="res://img/assets/maison_champi.png" id="7_4on3e"]
 [ext_resource type="Texture2D" uid="uid://6yads4g63dl1" path="res://img/assets/maison_champi_jaune.png" id="8_bssq0"]
@@ -41,6 +41,37 @@
 [ext_resource type="PackedScene" uid="uid://dyn55fbykmumc" path="res://scene/assets/garden.tscn" id="41_ojpgx"]
 [ext_resource type="PackedScene" uid="uid://dntvfvxjo577t" path="res://scene/assets/grass.tscn" id="42_f65ro"]
 [ext_resource type="PackedScene" uid="uid://ytx02bfiewpd" path="res://scene/assets/hill.tscn" id="43_pu337"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8uufd"]
+radius = 379.78
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8uufd"]
+radius = 9.51736
+height = 29.8351
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hltbc"]
+radius = 8.19441
+height = 30.5842
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0s0d"]
+radius = 7.02864
+height = 25.7987
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1xagg"]
+radius = 7.87975
+height = 28.2217
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_urahp"]
+radius = 10.0876
+height = 30.2516
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cskkv"]
+radius = 6.39749
+height = 25.7987
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_028i1"]
+radius = 10.4264
+height = 35.8061
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_8x52i"]
 scenes/1/scene = ExtResource("23_urahp")
@@ -211,11 +242,30 @@ scale = Vector2(1.80942, 1.80942)
 texture = ExtResource("7_4on3e")
 offset = Vector2(0, -170)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="maison/MaisonChampi"]
+position = Vector2(19.8959, -122.691)
+scale = Vector2(0.552663, 0.552663)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maison/MaisonChampi/StaticBody2D"]
+shape = SubResource("CircleShape2D_8uufd")
+
 [node name="MaisonChampiJaune" type="Sprite2D" parent="maison"]
 position = Vector2(-909, -1269)
 scale = Vector2(1.47785, 1.47785)
 texture = ExtResource("8_bssq0")
 offset = Vector2(0, -150)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="maison/MaisonChampiJaune"]
+position = Vector2(-14.8865, -133.978)
+scale = Vector2(0.676659, 0.676659)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maison/MaisonChampiJaune/StaticBody2D"]
+scale = Vector2(28.8946, -25.6074)
+shape = SubResource("CapsuleShape2D_8uufd")
 
 [node name="MaisonOignon" type="Sprite2D" parent="maison"]
 position = Vector2(2389, 1332)
@@ -223,11 +273,33 @@ scale = Vector2(1.2756, 1.27953)
 texture = ExtResource("9_jk4ss")
 offset = Vector2(0, -140)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="maison/MaisonOignon"]
+position = Vector2(-1.56787, -53.1445)
+scale = Vector2(0.676659, 0.676659)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maison/MaisonOignon/StaticBody2D"]
+rotation = 1.5708
+scale = Vector2(28.8946, -25.6074)
+shape = SubResource("CapsuleShape2D_hltbc")
+
 [node name="MaisonPoireau" type="Sprite2D" parent="maison"]
 position = Vector2(-1195, 1260)
 scale = Vector2(1.288, 1.288)
 texture = ExtResource("10_r5om4")
 offset = Vector2(0, -90)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="maison/MaisonPoireau"]
+position = Vector2(10.8696, -48.913)
+rotation = 1.5708
+scale = Vector2(0.676659, 0.676659)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maison/MaisonPoireau/StaticBody2D"]
+scale = Vector2(28.8946, -25.6074)
+shape = SubResource("CapsuleShape2D_y0s0d")
 
 [node name="Pizzeria" type="Sprite2D" parent="maison"]
 position = Vector2(234, 2206)
@@ -235,11 +307,34 @@ scale = Vector2(1.60324, 1.60324)
 texture = ExtResource("29_h75vw")
 offset = Vector2(0, -230)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="maison/Pizzeria"]
+position = Vector2(-16.8409, -87.3231)
+rotation = 1.5708
+scale = Vector2(0.676659, 0.676659)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maison/Pizzeria/StaticBody2D"]
+position = Vector2(21.2012, 2.76537)
+scale = Vector2(28.8946, -25.6074)
+shape = SubResource("CapsuleShape2D_1xagg")
+
 [node name="MaisonChampiBleu" type="Sprite2D" parent="maison"]
 position = Vector2(2082, 416)
 scale = Vector2(1.51092, 1.51092)
 texture = ExtResource("22_a454a")
 offset = Vector2(0, -125)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="maison/MaisonChampiBleu"]
+position = Vector2(10.5895, -117.809)
+rotation = 1.5708
+scale = Vector2(0.676659, 0.676659)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maison/MaisonChampiBleu/StaticBody2D"]
+scale = Vector2(28.8946, -25.6074)
+shape = SubResource("CapsuleShape2D_urahp")
 
 [node name="MaisonNavet" type="Sprite2D" parent="maison"]
 position = Vector2(3180, -1244)
@@ -247,11 +342,34 @@ scale = Vector2(1.6017, 1.6017)
 texture = ExtResource("23_te172")
 offset = Vector2(0, -175)
 
+[node name="StaticBody2D" type="StaticBody2D" parent="maison/MaisonNavet"]
+position = Vector2(8.11645, -33.7142)
+rotation = 1.5708
+scale = Vector2(0.676659, 0.676659)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maison/MaisonNavet/StaticBody2D"]
+scale = Vector2(28.8946, -25.6074)
+shape = SubResource("CapsuleShape2D_cskkv")
+
 [node name="MaisonCarotte" type="Sprite2D" parent="maison"]
 position = Vector2(-487, -159)
 scale = Vector2(1.43603, 1.43603)
 texture = ExtResource("24_2kko2")
 offset = Vector2(0, -55)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="maison/MaisonCarotte"]
+position = Vector2(-104.455, -122.56)
+rotation = 0.785398
+scale = Vector2(0.676659, 0.676659)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="maison/MaisonCarotte/StaticBody2D"]
+position = Vector2(-36.385, -14.554)
+scale = Vector2(28.8946, -25.6074)
+shape = SubResource("CapsuleShape2D_028i1")
 
 [node name="autre" type="Node2D" parent="."]
 y_sort_enabled = true

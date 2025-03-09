@@ -57,6 +57,7 @@ func _process(_delta: float) -> void:
 			tween.tween_property(self, "global_position", get_global_mouse_position(), 0.05)
 		rotation = clamp((position.x - previous_pos.x)*0.0125, -1, 1)
 		previous_pos = position
+		move_and_slide()
 		
 func drag() -> void:
 	if !immune_to_pickup and !cant_be_caught:

@@ -66,6 +66,5 @@ collision_enabled = false
 
 [node name="Gnome" parent="." instance=ExtResource("23_gfrvb")]
 position = Vector2(2913, 1143)
-scale = Vector2(4, 4)
 gnome_size = 4.0
 sprite = ExtResource("24_pqdft")
