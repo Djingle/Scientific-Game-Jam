@@ -2,6 +2,7 @@ extends Control
 
 signal tween_done()
 signal text_written()
+signal text_closed()
 
 var is_writing : bool = false
 var is_displayed : bool = false
@@ -50,6 +51,7 @@ func _on_menu_button_pressed() -> void:
 func _on_dialog_close_button_pressed() -> void:
 	$AudioStreamPlayer.play()
 	display_manager(false)
+	emit_signal("text_closed")
 
 func _on_dialog_open_button_pressed() -> void:
 	if is_displayed : return

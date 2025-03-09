@@ -52,6 +52,7 @@ stream = ExtResource("6_ma2kq")
 
 [node name="MenuTheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_smclk")
+volume_db = -5.0
 
 [connection signal="pressed" from="TextureRect/ButtonJouer" to="." method="_on_button_jouer_pressed"]
 [connection signal="pressed" from="TextureRect/ButtonCredits" to="." method="_on_button_credits_pressed"]

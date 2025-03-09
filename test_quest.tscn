@@ -109,7 +109,6 @@ speech_outro = "C’est clair que pour celui-là, une aspirine n’aurait pas su
 quest_gnome = NodePath("../../Map/GnomeCollection/QuestGiver1")
 draggable_gnomes = [NodePath("../../Map/GnomeCollection/QuestHelper1")]
 goal_gnome = NodePath("../../Map/GnomeCollection/QuestGiver1")
-is_active = true
 next_quest = NodePath("../Quest2")
 
 [node name="Quest2" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("3_vmmii")]

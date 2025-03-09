@@ -9,6 +9,8 @@ func _ready() -> void:
 	for child : Quest in $QuestCollection.get_children():
 		child.quest_start.connect(quest_start)
 		child.quest_completed.connect(quest_completed)
+	$CanvasLayer/UI.text_closed.connect(quest_begin)
+	$CanvasLayer/UI.display_text("Bienvenue au village des gnomes ! Il semblerait que tu arrives à point : mes camarades vont avoir besoin de toi. Chaque gnome peut en aider un·e autre. Peux-tu les assister en leur amenant la personne pertinente ? Je suis sûr que ce carnet qui dépasse de ta poche pourra t’être utile.")
 		
 func _process(_delta: float) -> void:
 	gnome_drag_and_drop()
@@ -31,6 +33,10 @@ func remove_gnome(gnome : Gnome) -> void:
 
 func gnome_talking(speech : String) -> void:
 	$CanvasLayer/UI.display_text(speech)
+
+func quest_begin():
+	var quest : Quest = $QuestCollection/Quest
+	quest_start($QuestCollection/Quest, $QuestCollection/Quest.quest_gnome.global_position)
 
 func quest_start(quest : Quest, pos : Vector2) -> void:
 	$Camera.move_to(pos)
