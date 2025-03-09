@@ -13,6 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_button_jouer_pressed() -> void:
+	$AudioStreamPlayer.play()
 	get_tree().change_scene_to_file("res://test_quest.tscn")
 
 

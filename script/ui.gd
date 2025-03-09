@@ -48,6 +48,7 @@ func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene/accueil.tscn")
 
 func _on_dialog_close_button_pressed() -> void:
+	$AudioStreamPlayer.play()
 	display_manager(false)
 
 func _on_dialog_open_button_pressed() -> void:
