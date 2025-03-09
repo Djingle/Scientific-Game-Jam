@@ -80,5 +80,8 @@ func _on_mouse_exited() -> void:
 	
 func victory():
 	$Sprite2D.texture = sprite_victory
+	var tween = create_tween()
+	tween.tween_property(self, "scale:y", gnome_size * .8, .5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_LINEAR)
 	$AudioPlayer.stream = throw_sounds[randi_range(0, throw_sounds.size()-1)]
 	$AudioPlayer.play()
+	tween.tween_property(self, "scale:y", gnome_size * 1, 1.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
