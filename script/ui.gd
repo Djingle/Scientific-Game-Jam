@@ -14,7 +14,7 @@ func display_manager(mode : bool = true):
 	#Shrinks or displays the text box
 	var anchor_top : float = 1
 	if mode == true:
-		anchor_top = 0.65
+		anchor_top = 0.75
 	else:
 		$DialogText/DialogCloseButton.hide()
 		$DialogText/DialogLabel.text = ""

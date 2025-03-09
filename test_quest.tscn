@@ -35,19 +35,37 @@ script = ExtResource("2_5187c")
 [node name="QuestCollection" type="Node" parent="."]
 
 [node name="Quest" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("3_vmmii")]
-speech_intro = "Regarde ! Eudes s’est cassé le [pied], il faudrait que tu lui files un coup de main…"
-speech_outro = "Félicitation !"
-quest_gnome = NodePath("")
-draggable_gnomes = [NodePath(""), NodePath("")]
-goal_gnome = NodePath("")
+speech_intro = "La santé chez les gnomes, c’est toujours délicat ; ils sont si maladroits ! Et se casser le tépo, c’est jamais agréable. Tu pourrais trouver quelqu’un pour l’aider ?"
+speech_outro = "C’est clair que pour celui-là, une aspirine n’aurait pas suffi. Il sera vite remis sur pied."
+quest_gnome = NodePath("../../Map/GnomeCollection/pied")
+draggable_gnomes = [NodePath("../../Map/GnomeCollection/medecin")]
+goal_gnome = NodePath("../../Map/GnomeCollection/pied")
+is_active = true
 next_quest = NodePath("../Quest2")
 
 [node name="Quest2" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("3_vmmii")]
-speech_intro = "Pol le Pizzaïolo a l’air désespéré. C’est vrai qu’il ne sait pas faire les [gâteaux]… Peux-tu lui trouver une solution ?"
-speech_outro = "Bravo !"
-quest_gnome = NodePath("")
-draggable_gnomes = [NodePath("")]
-goal_gnome = NodePath("")
+speech_intro = "Je m’en doutais. Des semaines que le pizzaïolo prépare ce repas, mais il a toujours du mal avec les ricoro. Quelqu’un pourrait sûrement l’assister."
+speech_outro = "Avec un peu de chance, personne n’aura d’intoxication alimentaire … Pas de relâchement, la journée n’est pas finie."
+quest_gnome = NodePath("../../Map/GnomeCollection/pizza")
+draggable_gnomes = [NodePath("../../Map/GnomeCollection/patisse")]
+goal_gnome = NodePath("../../Map/GnomeCollection/pizza")
+next_quest = NodePath("../Quest3")
+
+[node name="Quest3" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("3_vmmii")]
+speech_intro = "Le pauvre, une kécoigon remoutanlé. Il y tenait beaucoup, ça me fait un peu mal au cœur. Allez, au boulot."
+speech_outro = "Est-ce que ça me manquait vraiment, de l’entendre ? J’imagine."
+quest_gnome = NodePath("../../Map/GnomeCollection/guitare")
+draggable_gnomes = [NodePath("../../Map/GnomeCollection/luthier")]
+goal_gnome = NodePath("../../Map/GnomeCollection/guitare")
+next_quest = NodePath("../Quest4")
+
+[node name="Quest4" parent="QuestCollection" node_paths=PackedStringArray("quest_gnome", "draggable_gnomes", "goal_gnome", "next_quest") instance=ExtResource("3_vmmii")]
+speech_intro = "Le maire est si gêné depuis la dernière fois… Je peux compter sur toi pour lui délier la langue, j’imagine ?"
+speech_outro = "Merci pour ton aide. Grâce à toi, on aura l’immense plaisir de nous faire déboucher les esgourdes par les bonnes paroles de notre cher maire.
+D’ailleurs, tu l’avais sûrement deviné, n’est-ce pas ? Tous ces gnomes se sont donné tant de mal pour organiser un petit quelque chose…"
+quest_gnome = NodePath("../../Map/GnomeCollection/maire")
+draggable_gnomes = [NodePath("../../Map/GnomeCollection/orthopho")]
+goal_gnome = NodePath("../../Map/GnomeCollection/maire")
 next_quest = NodePath("../Quest")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
