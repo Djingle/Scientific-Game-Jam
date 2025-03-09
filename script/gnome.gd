@@ -6,6 +6,10 @@ class_name Gnome
 @export var gnome_size : float = 1.0
 @export var cant_be_caught : bool = false
 @export var sprite : CompressedTexture2D
+@export_subgroup("Sounds")
+@export var grab_sounds : Array[AudioStreamWAV]
+@export var drop_sounds : Array[AudioStreamWAV]
+@export var throw_sounds : Array[AudioStreamWAV]
 var dragging : bool = false
 var mouse_pos : Vector2 = Vector2.ZERO
 var previous_pos : Vector2 = Vector2.ZERO

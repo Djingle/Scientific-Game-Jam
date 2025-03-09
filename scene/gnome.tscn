@@ -1,7 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgc7fjmwp6w0g"]
+[gd_scene load_steps=18 format=3 uid="uid://cgc7fjmwp6w0g"]
 
 [ext_resource type="Script" uid="uid://d2q01amixa73k" path="res://script/gnome.gd" id="1_ats4t"]
+[ext_resource type="AudioStream" uid="uid://dy17tv3v63462" path="res://audio/final_sfx/Drop/SFX_GnomePoser-001.wav" id="2_0focw"]
 [ext_resource type="Texture2D" uid="uid://cs5gtninmu2de" path="res://img/Gnome/Gnome 1.png" id="2_ats4t"]
+[ext_resource type="AudioStream" uid="uid://bxy501y1gjn73" path="res://audio/final_sfx/Drop/SFX_GnomePoser-002.wav" id="3_c6q0c"]
+[ext_resource type="AudioStream" uid="uid://csj4nepcxons8" path="res://audio/final_sfx/Drop/SFX_GnomePoser-003.wav" id="4_y01ci"]
+[ext_resource type="AudioStream" uid="uid://dplajihbvf0op" path="res://audio/final_sfx/Drop/SFX_GnomePoser-004.wav" id="5_i3f8j"]
+[ext_resource type="AudioStream" uid="uid://d3y871kkl6yxg" path="res://audio/final_sfx/Drop/SFX_GnomePoser-005.wav" id="6_2mnkx"]
+[ext_resource type="AudioStream" uid="uid://bavoehpuws1sv" path="res://audio/final_sfx/Drop/SFX_GnomePoser-006.wav" id="7_oa77q"]
+[ext_resource type="AudioStream" uid="uid://5el7i06avn7n" path="res://audio/final_sfx/Drop/SFX_GnomePoser-007.wav" id="8_os44y"]
+[ext_resource type="AudioStream" uid="uid://c38qlqpbw4c5x" path="res://audio/final_sfx/Drop/SFX_GnomePoser-008.wav" id="9_j4lsu"]
+[ext_resource type="AudioStream" uid="uid://dxdkjukwkv5lr" path="res://audio/final_sfx/Drop/SFX_GnomePoser-009.wav" id="10_muwsb"]
+[ext_resource type="AudioStream" uid="uid://chhm402n5c804" path="res://audio/final_sfx/Drop/SFX_GnomePoser-010.wav" id="11_nt8jv"]
+[ext_resource type="AudioStream" uid="uid://df4iqph7g7xrn" path="res://audio/final_sfx/Drop/SFX_GnomePoser-011.wav" id="12_6iehu"]
+[ext_resource type="AudioStream" uid="uid://ddvox63cvryiy" path="res://audio/final_sfx/Drop/SFX_GnomePoser-012.wav" id="13_3vtkk"]
+[ext_resource type="AudioStream" uid="uid://cul4o4vdaq3qa" path="res://audio/final_sfx/Drop/SFX_GnomePoser-013.wav" id="14_mj31m"]
+[ext_resource type="AudioStream" uid="uid://cor08ic7agffg" path="res://audio/final_sfx/Drop/SFX_GnomePoser-014.wav" id="15_cynxy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uks88"]
 radius = 15.0
@@ -11,6 +25,8 @@ height = 71.0
 z_index = 1
 input_pickable = true
 script = ExtResource("1_ats4t")
+grab_sounds = Array[AudioStreamWAV]([ExtResource("2_0focw"), ExtResource("3_c6q0c"), ExtResource("4_y01ci"), ExtResource("5_i3f8j"), ExtResource("6_2mnkx"), ExtResource("7_oa77q"), ExtResource("8_os44y"), ExtResource("9_j4lsu"), ExtResource("10_muwsb"), ExtResource("11_nt8jv"), ExtResource("12_6iehu"), ExtResource("13_3vtkk"), ExtResource("14_mj31m"), ExtResource("15_cynxy")])
+drop_sounds = Array[AudioStreamWAV]([null, null, null])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
@@ -19,6 +35,8 @@ texture = ExtResource("2_ats4t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -2)
 shape = SubResource("CapsuleShape2D_uks88")
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

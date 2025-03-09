@@ -12,18 +12,18 @@ func _ready() -> void:
 
 func display_manager(mode : bool = true):
 	#Shrinks or displays the text box
-	var anchor_top : float = 1
-	var anchor_bottom : float = 1.25
+	var a_top : float = 1
+	var a_bottom : float = 1.25
 	if mode == true:
-		anchor_top = .75
-		anchor_bottom = .7
+		a_top = .75
+		a_bottom = .7
 	else:
 		$DialogText/DialogCloseButton.hide()
 		$DialogText/DialogLabel.text = ""
 	var tween = create_tween()
 	tween.set_parallel()
-	tween.tween_property($DialogText, "anchor_top", anchor_top, .25)
-	tween.tween_property($DialogText, "anchor_bottom", anchor_bottom, .25)
+	tween.tween_property($DialogText, "anchor_top", a_top, .25)
+	tween.tween_property($DialogText, "anchor_bottom", a_bottom, .25)
 	await tween.finished
 	if mode == true: $DialogText/DialogCloseButton.show()
 	emit_signal("tween_done")

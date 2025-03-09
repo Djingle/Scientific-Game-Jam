@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cn0c6wg873m6u"]
+[gd_scene load_steps=25 format=3 uid="uid://cn0c6wg873m6u"]
 
 [ext_resource type="Script" uid="uid://cqk5qwlqyhp2s" path="res://script/main.gd" id="1_x4pkt"]
 [ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://scene/camera.gd" id="2_5187c"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://pxr86qely4qp" path="res://img/Gnome/Gnome 6.png" id="20_6jvul"]
 [ext_resource type="Texture2D" uid="uid://dd0glspha5spp" path="res://img/Gnome/Gnome 7.png" id="21_jmsr0"]
 [ext_resource type="Texture2D" uid="uid://dv84sk721aew3" path="res://img/Gnome/Gnome 8.png" id="22_5mihj"]
+[ext_resource type="AudioStream" uid="uid://chn7ofiiqpps5" path="res://snd/ScientificGameJam2025_LP.wav" id="23_jmsr0"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6jvul"]
 
@@ -77,113 +78,135 @@ wait_time = 5.0
 one_shot = true
 
 [node name="Map" parent="." instance=ExtResource("5_5187c")]
+position = Vector2(-1, 0)
 
 [node name="GnomeCollection" type="Node2D" parent="Map"]
 y_sort_enabled = true
 
 [node name="QuestGiver1" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(43, -1860)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 cant_be_caught = true
 sprite = ExtResource("7_oghkn")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="QuestGiver2" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-36, 2382)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 cant_be_caught = true
 sprite = ExtResource("8_de2qy")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="QuestGiver3" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-184, 558)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 cant_be_caught = true
 sprite = ExtResource("9_6jvul")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="QuestGiver4" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(3287, 159)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 cant_be_caught = true
 sprite = ExtResource("10_jmsr0")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="QuestHelper1" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(3655, -1126)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("11_5mihj")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="QuestHelper2" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(950, -432)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("12_ml3jq")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="QuestHelper3" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-1460, -1244)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("13_3moud")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="QuestHelper4" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-2325, 707)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("14_qu13g")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="Villager1" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(2607, 1632)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("15_7ixa7")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="Villager2" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-408, -1053)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("16_i0ypu")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="Villager3" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(1664, 526)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("17_mpsdb")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="Villager4" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(1218, 1649)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("18_58x81")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="Villager5" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(2122, -1680)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("19_pbpx2")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="Villager6" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(3634, -2205)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("20_6jvul")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="Villager7" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-1065, 1423)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("21_jmsr0")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="Villager8" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(-2453, -2440)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 sprite = ExtResource("22_5mihj")
+grab_sounds = Array[AudioStreamWAV]([])
 
 [node name="EndInvisiGnome" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
 position = Vector2(551, -1854)
-scale = Vector2(3, 3)
-gnome_size = 3.0
+scale = Vector2(4, 4)
+gnome_size = 4.0
 cant_be_caught = true
 sprite = SubResource("CompressedTexture2D_6jvul")
+grab_sounds = Array[AudioStreamWAV]([])
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_jmsr0")
+autoplay = true
