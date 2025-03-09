@@ -45,7 +45,7 @@ func _process(_delta: float) -> void:
 				immune_to_pickup = true
 				await tween.finished
 				immune_to_pickup = false
-				z_index = 1
+				z_index = 0
 				position = position.clamp(Vector2(map_limit[0], map_limit[3]), Vector2(map_limit[2], map_limit[1]))
 					
 		#When being dragged, it will follow the mouse
