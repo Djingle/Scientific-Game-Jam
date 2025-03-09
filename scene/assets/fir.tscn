@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfxsb6gbvtv2n"]
+
+[ext_resource type="Texture2D" uid="uid://bxntl5p0v88nb" path="res://img/assets/sapin.png" id="1_lde1w"]
+
+[node name="Fir" type="Sprite2D"]
+scale = Vector2(1.174, 1.245)
+texture = ExtResource("1_lde1w")
+offset = Vector2(0, -200)

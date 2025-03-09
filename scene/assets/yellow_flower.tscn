@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmcdrivhkcumm"]
+
+[ext_resource type="Texture2D" uid="uid://cq1v5ts5ahnsj" path="res://img/assets/petites_fleurs.png" id="1_tw1vw"]
+
+[node name="YellowFlower" type="Sprite2D"]
+scale = Vector2(1.175, 1.175)
+texture = ExtResource("1_tw1vw")

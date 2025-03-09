@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://jr8vs2ko0n37"]
+
+[ext_resource type="Texture2D" uid="uid://cpwhgqkfisemk" path="res://img/assets/champi_jaune.png" id="1_fywqm"]
+
+[node name="MushroomYellow" type="Sprite2D"]
+texture = ExtResource("1_fywqm")
+offset = Vector2(0, 70)

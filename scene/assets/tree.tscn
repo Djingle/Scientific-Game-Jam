@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvn3kubruabjc"]
+
+[ext_resource type="Texture2D" uid="uid://lpl6t6dsra0u" path="res://img/assets/arbre.png" id="1_3it5y"]
+
+[node name="Tree" type="Sprite2D"]
+scale = Vector2(1.236, 1.236)
+texture = ExtResource("1_3it5y")
+offset = Vector2(0, -140)

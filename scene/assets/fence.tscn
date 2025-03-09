@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c82xk8p6qwend"]
+
+[ext_resource type="Texture2D" uid="uid://bbvswekv10uw6" path="res://img/assets/barriere.png" id="1_dnwf6"]
+
+[node name="Fence" type="Sprite2D"]
+scale = Vector2(1.216, 1.216)
+texture = ExtResource("1_dnwf6")
+offset = Vector2(0, 30)

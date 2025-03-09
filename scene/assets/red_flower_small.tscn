@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://s1116pdhxyus"]
+
+[ext_resource type="Texture2D" uid="uid://48mioqsivqw8" path="res://img/assets/fleurs_rouge.png" id="1_gyp6d"]
+
+[node name="RedFlowerSmall" type="Sprite2D"]
+texture = ExtResource("1_gyp6d")
+offset = Vector2(0, 10)

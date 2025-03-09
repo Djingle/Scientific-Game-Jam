@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ytx02bfiewpd"]
+
+[ext_resource type="Texture2D" uid="uid://bg1cp2cuk53u5" path="res://img/assets/butte.png" id="1_sfqk3"]
+
+[node name="Hill" type="Sprite2D"]
+scale = Vector2(1.818, 1.818)
+texture = ExtResource("1_sfqk3")
+offset = Vector2(0, -45)

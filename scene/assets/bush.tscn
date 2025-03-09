@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://co0ylh6k3xm20"]
+
+[ext_resource type="Texture2D" uid="uid://bnf57hbckxidj" path="res://img/assets/petit_buisson.png" id="1_3rowq"]
+
+[node name="Bush" type="Sprite2D"]
+scale = Vector2(1.582, 1.582)
+texture = ExtResource("1_3rowq")
+offset = Vector2(0, 45)

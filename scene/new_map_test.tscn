@@ -1,0 +1,72 @@
+[gd_scene load_steps=27 format=4 uid="uid://vshx8ufa18q6"]
+
+[ext_resource type="PackedScene" uid="uid://b51665blw23xd" path="res://scene/assets/apple_tree.tscn" id="1_5pwtl"]
+[ext_resource type="PackedScene" uid="uid://dvn3kubruabjc" path="res://scene/assets/tree.tscn" id="1_y10s7"]
+[ext_resource type="PackedScene" uid="uid://o3l1fkcyxfsa" path="res://map.tscn" id="2_jfi86"]
+[ext_resource type="PackedScene" uid="uid://vqn3cgue2hhy" path="res://scene/assets/mushroom_flat.tscn" id="2_ljxsw"]
+[ext_resource type="PackedScene" uid="uid://csxx4gvwks70y" path="res://scene/assets/mushroom_red.tscn" id="3_ngsrm"]
+[ext_resource type="PackedScene" uid="uid://jr8vs2ko0n37" path="res://scene/assets/mushroom_yellow.tscn" id="4_yg30m"]
+[ext_resource type="PackedScene" uid="uid://crpj6bu11sv1r" path="res://scene/assets/red_flower_big.tscn" id="5_hdei3"]
+[ext_resource type="PackedScene" uid="uid://s1116pdhxyus" path="res://scene/assets/red_flower_small.tscn" id="6_yo6fv"]
+[ext_resource type="PackedScene" uid="uid://cdkbvd3n8c7jw" path="res://scene/assets/rock.tscn" id="7_li0gm"]
+[ext_resource type="PackedScene" uid="uid://xf4e2vvy5jeg" path="res://scene/assets/sprout.tscn" id="8_w3xeg"]
+[ext_resource type="PackedScene" uid="uid://wk7q17u7lqe7" path="res://scene/assets/stool.tscn" id="9_6k25s"]
+[ext_resource type="PackedScene" uid="uid://c1f54jbqsecoc" path="res://scene/assets/sunflower.tscn" id="10_fpcln"]
+[ext_resource type="PackedScene" uid="uid://co0ylh6k3xm20" path="res://scene/assets/bush.tscn" id="12_6p6wv"]
+[ext_resource type="PackedScene" uid="uid://ca5aikevni71l" path="res://scene/assets/wheat.tscn" id="13_ley3x"]
+[ext_resource type="PackedScene" uid="uid://dmcdrivhkcumm" path="res://scene/assets/yellow_flower.tscn" id="14_co7lg"]
+[ext_resource type="PackedScene" uid="uid://c82xk8p6qwend" path="res://scene/assets/fence.tscn" id="15_0e5j2"]
+[ext_resource type="PackedScene" uid="uid://dvyt42m15u5v1" path="res://scene/assets/fern.tscn" id="16_ws1ny"]
+[ext_resource type="PackedScene" uid="uid://cfxsb6gbvtv2n" path="res://scene/assets/fir.tscn" id="17_gmcgr"]
+[ext_resource type="PackedScene" uid="uid://c6erv6e43neqr" path="res://scene/assets/flower_pot.tscn" id="18_8prur"]
+[ext_resource type="PackedScene" uid="uid://dyn55fbykmumc" path="res://scene/assets/garden.tscn" id="19_u0ljw"]
+[ext_resource type="PackedScene" uid="uid://dntvfvxjo577t" path="res://scene/assets/grass.tscn" id="20_x6ybr"]
+[ext_resource type="PackedScene" uid="uid://ytx02bfiewpd" path="res://scene/assets/hill.tscn" id="21_wiec1"]
+[ext_resource type="PackedScene" uid="uid://cgc7fjmwp6w0g" path="res://scene/gnome.tscn" id="23_gfrvb"]
+[ext_resource type="Texture2D" uid="uid://dv84sk721aew3" path="res://img/Gnome/Gnome 8.png" id="24_pqdft"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_mqe44"]
+scenes/1/scene = ExtResource("1_5pwtl")
+scenes/2/scene = ExtResource("12_6p6wv")
+scenes/3/scene = ExtResource("15_0e5j2")
+scenes/4/scene = ExtResource("16_ws1ny")
+scenes/5/scene = ExtResource("17_gmcgr")
+scenes/6/scene = ExtResource("18_8prur")
+scenes/7/scene = ExtResource("19_u0ljw")
+scenes/8/scene = ExtResource("20_x6ybr")
+scenes/9/scene = ExtResource("21_wiec1")
+scenes/10/scene = ExtResource("2_ljxsw")
+scenes/11/scene = ExtResource("3_ngsrm")
+scenes/12/scene = ExtResource("4_yg30m")
+scenes/13/scene = ExtResource("5_hdei3")
+scenes/14/scene = ExtResource("6_yo6fv")
+scenes/15/scene = ExtResource("7_li0gm")
+scenes/16/scene = ExtResource("8_w3xeg")
+scenes/17/scene = ExtResource("9_6k25s")
+scenes/18/scene = ExtResource("10_fpcln")
+scenes/19/scene = ExtResource("1_y10s7")
+scenes/20/scene = ExtResource("13_ley3x")
+scenes/21/scene = ExtResource("14_co7lg")
+
+[sub_resource type="TileSet" id="TileSet_3l5rs"]
+tile_size = Vector2i(1, 1)
+sources/1 = SubResource("TileSetScenesCollectionSource_mqe44")
+
+[node name="NewMapTest" type="Node2D"]
+y_sort_enabled = true
+
+[node name="TileMap" type="TileMapLayer" parent="."]
+y_sort_enabled = true
+position = Vector2(23, -57)
+tile_map_data = PackedByteArray("AABB+xj/AQAAAAAAAQCI+D0AAQAAAAAAAQBX98wJAQAAAAAAAQBtDVQLAQAAAAAAAQAvC7kEAQAAAAAAAQAnAuMIAQAAAAAAAgAnASsCAQAAAAAAAgCiA/n5AQAAAAAAAgBS/GT3AQAAAAAAAgAe+CcFAQAAAAAAAwDyDWwGAQAAAAAAAwD9/hkJAQAAAAAABAAnDtUBAQAAAAAABABRDuj9AQAAAAAABACNCrEFAQAAAAAABACoC8gJAQAAAAAABQCoC8kJAQAAAAAABQCoC8oJAQAAAAAABQCoC8sJAQAAAAAABQCB9ZcIAQAAAAAABQCB9ZgIAQAAAAAABQCB9ZkIAQAAAAAABQCB9ZoIAQAAAAAABQCR+O33AQAAAAAABQD5CgP3AQAAAAAABQAnD0b6AQAAAAAABQBhCMD9AQAAAAAAAQBM9SkFAQAAAAAABgAKBw0FAQAAAAAABgCyCUb4AQAAAAAABgAM+DYEAQAAAAAABwCtDLYEAQAAAAAABwDlDnoFAQAAAAAABwCGDfX2AQAAAAAABwAV+ioGAQAAAAAACABf9jQJAQAAAAAACABL9NcCAQAAAAAACAAr+pT4AQAAAAAACAB5BoT3AQAAAAAACAAJBXEFAQAAAAAACADy9ycBAQAAAAAACQCw/RMIAQAAAAAACQCED0MEAQAAAAAACQBUB7v+AQAAAAAACQAX+2H2AQAAAAAACQB79fT/AQAAAAAACgBJDuP8AQAAAAAACgBWA34IAQAAAAAACgC7AkUIAQAAAAAACwCz9qIAAQAAAAAACwCO9Yf5AQAAAAAADAAjDfn8AQAAAAAADABjBYH8AQAAAAAADACeBWv9AQAAAAAACwB/Aw79AQAAAAAADQCwDj0AAQAAAAAADQB7D3AAAQAAAAAADQBe+a0AAQAAAAAADQBWEIIFAQAAAAAADgCDCH4JAQAAAAAADgCC/oADAQAAAAAADQA+/R8DAQAAAAAADQCk+iv7AQAAAAAADQAz+737AQAAAAAADQB9/lP7AQAAAAAABgDDDUv9AQAAAAAACwDPC/39AQAAAAAADwAI/noEAQAAAAAADwBZ+CEKAQAAAAAADwCz/4QBAQAAAAAADwBZBTL+AQAAAAAAEAD2CYv/AQAAAAAAEABqDXL9AQAAAAAAEABx9TL6AQAAAAAAEADh/t8DAQAAAAAAEACoDX8FAQAAAAAAEADlDYQEAQAAAAAAEAAJD7QAAQAAAAAAEAD09af6AQAAAAAAEQDa/zMCAQAAAAAAEQABCLwFAQAAAAAADgBUCDIIAQAAAAAAEgDsBjsJAQAAAAAAEgBo9jAEAQAAAAAAEgCj+SQEAQAAAAAAEgAVBuH8AQAAAAAAEgCs/KIAAQAAAAAAEAA++q/+AQAAAAAAEACo9Ez/AQAAAAAAEwCY+TL+AQAAAAAAEwA99kP5AQAAAAAAEwCkCDL4AQAAAAAAEwA5BbD1AQAAAAAAEwC2EGQJAQAAAAAAEwD0+4QJAQAAAAAAFADb/BoKAQAAAAAAFACw/aIJAQAAAAAAFAA193z/AQAAAAAAFAAVC3v4AQAAAAAAFAA5Civ9AQAAAAAAFAC4CSr+AQAAAAAAFACCCfIBAQAAAAAAFQDoA1sCAQAAAAAAFQBG/HMFAQAAAAAAFQA=")
+tile_set = SubResource("TileSet_3l5rs")
+collision_enabled = false
+
+[node name="Node2D" parent="." instance=ExtResource("2_jfi86")]
+
+[node name="Gnome" parent="." instance=ExtResource("23_gfrvb")]
+z_index = 0
+position = Vector2(2913, 1143)
+scale = Vector2(4, 4)
+gnome_size = 4.0
+sprite = ExtResource("24_pqdft")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6erv6e43neqr"]
+
+[ext_resource type="Texture2D" uid="uid://2e8e5hu7x43g" path="res://img/assets/bac fleur.png" id="1_o57id"]
+
+[node name="FlowerPot" type="Sprite2D"]
+texture = ExtResource("1_o57id")
+offset = Vector2(0, -40)
