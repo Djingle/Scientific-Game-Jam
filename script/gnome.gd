@@ -14,6 +14,8 @@ var dragging : bool = false
 var mouse_pos : Vector2 = Vector2.ZERO
 var previous_pos : Vector2 = Vector2.ZERO
 var immune_to_pickup : bool = false
+#top, bottom, right, left
+var map_limit : Array[int] = [-2970, 2680,4040, -2930]
 
 signal hover(gnome : Gnome)
 signal deselect(gnome : Gnome)
@@ -42,6 +44,7 @@ func _process(_delta: float) -> void:
 				await tween.finished
 				immune_to_pickup = false
 				z_index = 1
+				position = position.clamp(Vector2(map_limit[0], map_limit[3]), Vector2(map_limit[2], map_limit[1]))
 					
 		#When being dragged, it will follow the mouse
 		if dragging:
