@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhyun6fxlbg0n"]
+[gd_scene load_steps=7 format=3 uid="uid://bhyun6fxlbg0n"]
 
 [ext_resource type="Texture2D" uid="uid://dvpar7bagr86u" path="res://img/ecranaccuail/imageaccueil.png" id="1_5mgyc"]
 [ext_resource type="Script" uid="uid://58pjcdwtnsgf" path="res://scene/accueil.gd" id="1_jsbxc"]
 [ext_resource type="Texture2D" uid="uid://dhtt3gytf60r0" path="res://img/ecranaccuail/boutonjouer.png" id="2_5royu"]
 [ext_resource type="Texture2D" uid="uid://fc62seygonb0" path="res://img/ecranaccuail/boutoncredit.png" id="3_jsbxc"]
 [ext_resource type="Texture2D" uid="uid://mc6cbsd6suwe" path="res://img/ecranaccuail/credits.png" id="5_yrqiy"]
+[ext_resource type="AudioStream" uid="uid://msg5kug2onxf" path="res://audio/final_sfx/UI/SFX_StartGame.wav" id="6_ma2kq"]
 
 [node name="accueil" type="Control"]
 layout_mode = 3
@@ -44,6 +45,11 @@ offset_top = 78.0
 offset_right = 1686.0
 offset_bottom = 1009.0
 texture_normal = ExtResource("5_yrqiy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ma2kq")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 
 [connection signal="pressed" from="TextureRect/ButtonJouer" to="." method="_on_button_jouer_pressed"]
 [connection signal="pressed" from="TextureRect/ButtonCredits" to="." method="_on_button_credits_pressed"]

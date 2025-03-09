@@ -48,6 +48,7 @@ func _on_menu_button_pressed() -> void:
 	get_tree().quit()
 
 func _on_dialog_close_button_pressed() -> void:
+	$AudioStreamPlayer.play()
 	display_manager(false)
 
 func _on_dialog_open_button_pressed() -> void:

@@ -12,6 +12,7 @@ class_name Gnome
 @export var grab_sounds : Array[AudioStreamWAV]
 @export var drop_sounds : Array[AudioStreamWAV]
 @export var throw_sounds : Array[AudioStreamWAV]
+@export var victory_sound : AudioStreamWAV
 var dragging : bool = false
 var mouse_pos : Vector2 = Vector2.ZERO
 var previous_pos : Vector2 = Vector2.ZERO
@@ -89,6 +90,6 @@ func victory():
 	$Sprite2D.texture = sprite_victory
 	var tween = create_tween()
 	tween.tween_property(self, "scale:y", gnome_size * .8, .5).set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_LINEAR)
-	$AudioPlayer.stream = throw_sounds[randi_range(0, throw_sounds.size()-1)]
+	$AudioPlayer.stream = victory_sound
 	$AudioPlayer.play()
 	tween.tween_property(self, "scale:y", gnome_size * 1, 1.5).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_ELASTIC)
