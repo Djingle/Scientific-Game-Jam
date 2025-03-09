@@ -65,7 +65,6 @@ collision_enabled = false
 [node name="Node2D" parent="." instance=ExtResource("2_jfi86")]
 
 [node name="Gnome" parent="." instance=ExtResource("23_gfrvb")]
-z_index = 0
 position = Vector2(2913, 1143)
 scale = Vector2(4, 4)
 gnome_size = 4.0

@@ -14,7 +14,7 @@ signal quest_completed(quest : Quest)
 @export var goal_gnome : Gnome
 @export_group("Quest")
 @export var is_active : bool = false
-@export var next_quest : Quest
+@export var next_quest : Quest = null
 
 func _ready() -> void:
 	if is_active: $Timer.start()

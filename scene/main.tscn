@@ -89,27 +89,15 @@ y_sort_enabled = true
 
 [node name="Gnome" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
 position = Vector2(201, 436)
-grab_sounds = null
-drop_sounds = null
-throw_sounds = null
 
 [node name="Gnome2" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
 position = Vector2(476, 433)
-grab_sounds = null
-drop_sounds = null
-throw_sounds = null
 
 [node name="Gnome3" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
 position = Vector2(790, 452)
-grab_sounds = null
-drop_sounds = null
-throw_sounds = null
 
 [node name="Gnome4" parent="Map/GnomeCollection" instance=ExtResource("3_wp4xf")]
 position = Vector2(1187, 453)
-grab_sounds = null
-drop_sounds = null
-throw_sounds = null
 
 [node name="autre" type="Node2D" parent="Map"]
 y_sort_enabled = true
