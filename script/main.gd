@@ -42,5 +42,15 @@ func quest_completed(quest : Quest) -> void:
 	await $CanvasLayer/UI.text_written
 	$QuestEndTimer.start()
 	await $QuestEndTimer.timeout
-	quest.next_quest.is_active = true
-	quest.next_quest.start_quest()
+	if quest.next_quest:
+		quest.next_quest.is_active = true
+		quest.next_quest.start_quest()
+	else:
+		$CanvasLayer/TransitionQuest.show()
+		$CanvasLayer/EndScreen.show()
+		var tween = create_tween()
+		tween.tween_property($CanvasLayer/TransitionQuest, "color:a", 1, 0.75)
+		await tween.finished
+		var tween_end = create_tween()
+		tween_end.tween_property($CanvasLayer/EndScreen, "modulate:a", 1, 0.75)
+		

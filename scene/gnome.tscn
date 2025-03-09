@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=3 uid="uid://cgc7fjmwp6w0g"]
+[gd_scene load_steps=79 format=3 uid="uid://cgc7fjmwp6w0g"]
 
 [ext_resource type="Script" uid="uid://d2q01amixa73k" path="res://script/gnome.gd" id="1_ats4t"]
 [ext_resource type="AudioStream" uid="uid://dy17tv3v63462" path="res://audio/final_sfx/Drop/SFX_GnomePoser-001.wav" id="2_0focw"]
@@ -71,10 +71,50 @@
 [ext_resource type="AudioStream" uid="uid://dktv4u0bli52f" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-014.wav" id="69_mop4w"]
 [ext_resource type="AudioStream" uid="uid://djlw7m6dqfu14" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-015.wav" id="70_oi70q"]
 [ext_resource type="AudioStream" uid="uid://bl1222xaysqqo" path="res://audio/final_sfx/Throw/SFX_GnomeLancer-016.wav" id="71_nfrm5"]
+[ext_resource type="Texture2D" uid="uid://dv84sk721aew3" path="res://img/Gnome/Gnome 8.png" id="72_f8id6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uks88"]
 radius = 15.0
 height = 71.0
+
+[sub_resource type="Animation" id="Animation_f8id6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.1, 0.1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:offset:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_1t2t6"]
 resource_name = "idle"
@@ -105,35 +145,57 @@ tracks/1/keys = {
 "values": [0.0, 30.0]
 }
 
-[sub_resource type="Animation" id="Animation_f8id6"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_rcs5u"]
+resource_name = "Pick up"
+length = 0.75
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/path = NodePath(".:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 0.266667, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(0.1, 0.1)]
+"values": [Vector2(1, 1), Vector2(1, 0.72), Vector2(1, 1.28)]
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:offset:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+
+[sub_resource type="Animation" id="Animation_7otgn"]
+resource_name = "Drag"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0]
+"values": [Vector2(1, 1.28), Vector2(1, 1.12), Vector2(1, 1.28)]
+}
+
+[sub_resource type="Animation" id="Animation_v2c3e"]
+resource_name = "Drop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1.28), Vector2(1, 0.76), Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rcs5u"]
 _data = {
+&"Drag": SubResource("Animation_7otgn"),
+&"Drop": SubResource("Animation_v2c3e"),
+&"Pick up": SubResource("Animation_rcs5u"),
 &"RESET": SubResource("Animation_f8id6"),
 &"idle": SubResource("Animation_1t2t6")
 }
@@ -147,6 +209,7 @@ throw_sounds = Array[AudioStreamWAV]([ExtResource("56_f8id6"), ExtResource("57_r
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
+texture = ExtResource("72_f8id6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3, -2)
@@ -159,6 +222,8 @@ volume_db = 5.0
 libraries = {
 &"": SubResource("AnimationLibrary_rcs5u")
 }
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
