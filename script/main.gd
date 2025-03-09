@@ -46,6 +46,8 @@ func quest_completed(quest : Quest) -> void:
 		quest.next_quest.is_active = true
 		quest.next_quest.start_quest()
 	else:
+		$AudioStreamPlayer.stop()
+		$EndScreenMusic.play()
 		$CanvasLayer/TransitionQuest.show()
 		$CanvasLayer/EndScreen.show()
 		var tween = create_tween()

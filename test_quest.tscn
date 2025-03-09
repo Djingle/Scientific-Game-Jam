@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=3 uid="uid://cn0c6wg873m6u"]
+[gd_scene load_steps=87 format=3 uid="uid://cn0c6wg873m6u"]
 
 [ext_resource type="Script" uid="uid://cqk5qwlqyhp2s" path="res://script/main.gd" id="1_x4pkt"]
 [ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://scene/camera.gd" id="2_5187c"]
@@ -84,6 +84,7 @@
 [ext_resource type="Texture2D" uid="uid://7fjltmpkexc" path="res://img/Gnome/Gnome maire content.png" id="69_5vuo7"]
 [ext_resource type="Texture2D" uid="uid://beb1hwrsgfk0a" path="res://img/Gnome/Gnome_musicien_1er_frere.png" id="78_6w1up"]
 [ext_resource type="Texture2D" uid="uid://dtoq6avbmeh3k" path="res://img/Gnome/Gnome_musicien_2eme_frere.png" id="79_pkerm"]
+[ext_resource type="AudioStream" uid="uid://qfcknnf13i42" path="res://audio/music/Scientific Game Jam 2025 endscreen LP.wav" id="85_ep57x"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6jvul"]
 
@@ -310,3 +311,7 @@ drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l3
 stream = ExtResource("23_jmsr0")
 volume_db = -5.0
 autoplay = true
+
+[node name="EndScreenMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("85_ep57x")
+volume_db = -5.0
