@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://bctutbfiouq4p"]
+[gd_scene load_steps=22 format=3 uid="uid://cn0c6wg873m6u"]
 
 [ext_resource type="Script" uid="uid://cqk5qwlqyhp2s" path="res://script/main.gd" id="1_x4pkt"]
 [ext_resource type="Script" uid="uid://bwe5q2eql5j88" path="res://scene/camera.gd" id="2_5187c"]
 [ext_resource type="PackedScene" uid="uid://bhmy50c783ps8" path="res://scene/quest.tscn" id="3_vmmii"]
 [ext_resource type="PackedScene" uid="uid://brkewjwagy8ch" path="res://scene/ui.tscn" id="4_ifly3"]
-[ext_resource type="PackedScene" uid="uid://hx167w8uhq4x" path="res://map.tscn" id="5_5187c"]
+[ext_resource type="PackedScene" uid="uid://o3l1fkcyxfsa" path="res://map.tscn" id="5_5187c"]
+[ext_resource type="PackedScene" uid="uid://cgc7fjmwp6w0g" path="res://scene/gnome.tscn" id="6_oghkn"]
 [ext_resource type="Script" uid="uid://d2q01amixa73k" path="res://script/gnome.gd" id="6_ve4ad"]
 [ext_resource type="Texture2D" uid="uid://djkcwpro2ye6a" path="res://img/Gnome/Gnome jambe cassé.png" id="7_oghkn"]
 [ext_resource type="Texture2D" uid="uid://coxvdfid0sntw" path="res://img/Gnome/Gnome pizzaiolo pas bien.png" id="8_de2qy"]
@@ -80,72 +81,36 @@ one_shot = true
 [node name="GnomeCollection" type="Node2D" parent="Map"]
 y_sort_enabled = true
 
-[node name="pied" type="CharacterBody2D" parent="Map/GnomeCollection"]
-position = Vector2(51, -2017)
-scale = Vector2(3, 3)
-input_pickable = true
-script = ExtResource("6_ve4ad")
+[node name="Quest1 - Foot" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
+position = Vector2(43, -1860)
+gnome_size = 3.0
+cant_be_caught = true
+sprite = ExtResource("7_oghkn")
 
-[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/pied"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("7_oghkn")
-offset = Vector2(0, 500)
+[node name="Quest2 - Pizza" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
+position = Vector2(-36, 2382)
+gnome_size = 3.0
+cant_be_caught = true
+sprite = ExtResource("8_de2qy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/pied"]
-position = Vector2(-5, 50)
-shape = SubResource("RectangleShape2D_8ytc4")
+[node name="Quest3 - Song" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
+position = Vector2(-184, 558)
+gnome_size = 3.0
+cant_be_caught = true
+sprite = ExtResource("9_6jvul")
 
-[node name="pizza" type="CharacterBody2D" parent="Map/GnomeCollection"]
-position = Vector2(-31, 2223)
-scale = Vector2(3, 3)
-input_pickable = true
-script = ExtResource("6_ve4ad")
-
-[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/pizza"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("8_de2qy")
-offset = Vector2(0, 500)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/pizza"]
-position = Vector2(-5, 50)
-shape = SubResource("RectangleShape2D_8ytc4")
-
-[node name="guitare" type="CharacterBody2D" parent="Map/GnomeCollection"]
-position = Vector2(-187, 394)
-scale = Vector2(3, 3)
-input_pickable = true
-script = ExtResource("6_ve4ad")
-
-[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/guitare"]
-position = Vector2(2.33331, -1.33334)
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("9_6jvul")
-offset = Vector2(0, 500)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/guitare"]
-position = Vector2(-5, 50)
-shape = SubResource("RectangleShape2D_8ytc4")
-
-[node name="maire" type="CharacterBody2D" parent="Map/GnomeCollection"]
-position = Vector2(3291, 3)
-scale = Vector2(3, 3)
-input_pickable = true
-script = ExtResource("6_ve4ad")
-
-[node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/maire"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("10_jmsr0")
-offset = Vector2(0, 500)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/GnomeCollection/maire"]
-position = Vector2(-5, 50)
-shape = SubResource("RectangleShape2D_8ytc4")
+[node name="Quest4 - Mayor" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
+position = Vector2(3287, 159)
+gnome_size = 3.0
+cant_be_caught = true
+sprite = ExtResource("10_jmsr0")
 
 [node name="medecin" type="CharacterBody2D" parent="Map/GnomeCollection"]
 position = Vector2(3659, -1284)
 scale = Vector2(3, 3)
 input_pickable = true
 script = ExtResource("6_ve4ad")
+gnome_size = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/medecin"]
 scale = Vector2(0.1, 0.1)
@@ -161,6 +126,7 @@ position = Vector2(957, -589)
 scale = Vector2(3, 3)
 input_pickable = true
 script = ExtResource("6_ve4ad")
+gnome_size = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/patisse"]
 position = Vector2(0, 24.6667)
@@ -177,6 +143,7 @@ position = Vector2(-1447, -1395)
 scale = Vector2(3, 3)
 input_pickable = true
 script = ExtResource("6_ve4ad")
+gnome_size = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/luthier"]
 position = Vector2(0, 24.6667)
@@ -193,6 +160,7 @@ position = Vector2(-2310, 556)
 scale = Vector2(3, 3)
 input_pickable = true
 script = ExtResource("6_ve4ad")
+gnome_size = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/orthopho"]
 position = Vector2(0, 24.6667)
@@ -209,6 +177,7 @@ position = Vector2(2617, 1483)
 scale = Vector2(3, 3)
 input_pickable = true
 script = ExtResource("6_ve4ad")
+gnome_size = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/randomo1"]
 position = Vector2(0, 24.6667)
@@ -225,6 +194,7 @@ position = Vector2(-393, -1202)
 scale = Vector2(3, 3)
 input_pickable = true
 script = ExtResource("6_ve4ad")
+gnome_size = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/randomo2"]
 position = Vector2(0, 24.6667)
@@ -241,6 +211,7 @@ position = Vector2(1679, 372)
 scale = Vector2(3, 3)
 input_pickable = true
 script = ExtResource("6_ve4ad")
+gnome_size = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/randomo3"]
 position = Vector2(0, 24.6667)
@@ -257,6 +228,7 @@ position = Vector2(1235, 1495)
 scale = Vector2(3, 3)
 input_pickable = true
 script = ExtResource("6_ve4ad")
+gnome_size = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/randomo4"]
 position = Vector2(0, 24.6667)
@@ -273,6 +245,7 @@ position = Vector2(2136, -1830)
 scale = Vector2(3, 3)
 input_pickable = true
 script = ExtResource("6_ve4ad")
+gnome_size = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Map/GnomeCollection/randomo5"]
 position = Vector2(0, 24.6667)
@@ -284,14 +257,6 @@ offset = Vector2(0, 500)
 position = Vector2(-5, 50)
 shape = SubResource("RectangleShape2D_8ytc4")
 
-[connection signal="mouse_entered" from="Map/GnomeCollection/pied" to="Map/GnomeCollection/pied" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Map/GnomeCollection/pied" to="Map/GnomeCollection/pied" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="Map/GnomeCollection/pizza" to="Map/GnomeCollection/pizza" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Map/GnomeCollection/pizza" to="Map/GnomeCollection/pizza" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="Map/GnomeCollection/guitare" to="Map/GnomeCollection/guitare" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Map/GnomeCollection/guitare" to="Map/GnomeCollection/guitare" method="_on_mouse_exited"]
-[connection signal="mouse_entered" from="Map/GnomeCollection/maire" to="Map/GnomeCollection/maire" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="Map/GnomeCollection/maire" to="Map/GnomeCollection/maire" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Map/GnomeCollection/medecin" to="Map/GnomeCollection/medecin" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Map/GnomeCollection/medecin" to="Map/GnomeCollection/medecin" method="_on_mouse_exited"]
 [connection signal="mouse_entered" from="Map/GnomeCollection/patisse" to="Map/GnomeCollection/patisse" method="_on_mouse_entered"]
