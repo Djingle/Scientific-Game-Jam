@@ -7,6 +7,7 @@ signal text_closed()
 var is_writing : bool = false
 var is_displayed : bool = false
 var last_speech : String = ""
+var quest_count = 0
 
 func _ready() -> void:
 	display_manager(false)
@@ -44,6 +45,10 @@ func display_text(speech : String):
 		await tween.finished
 		emit_signal("text_written")
 		is_writing = false
+
+func incremente_quest_count():
+	quest_count += 1
+	$TaskRect/TaskLabel.text = "%d/4" % [quest_count]
 	
 func _on_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scene/accueil.tscn")

@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://ytx02bfiewpd"]
+[gd_scene load_steps=3 format=3 uid="uid://ytx02bfiewpd"]
 
 [ext_resource type="Texture2D" uid="uid://bg1cp2cuk53u5" path="res://img/assets/butte.png" id="1_sfqk3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sfqk3"]
+radius = 84.1584
+height = 254.125
 
 [node name="Hill" type="Sprite2D"]
 scale = Vector2(1.818, 1.818)
 texture = ExtResource("1_sfqk3")
 offset = Vector2(0, -45)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -10)
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_sfqk3")

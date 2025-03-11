@@ -2,35 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://d1dwecv3rca8m" path="res://img/assets/pommier.png" id="1_rsrdg"]
 
-[sub_resource type="Animation" id="Animation_rsrdg"]
-resource_name = "vent"
-length = 4.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-10, 0), Vector2(3, 3)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [-0.0651599, 0.077563]
-}
-
 [sub_resource type="Animation" id="Animation_16a7w"]
 length = 0.001
 tracks/0/type = "value"
@@ -57,6 +28,59 @@ tracks/1/keys = {
 "update": 0,
 "values": [-0.0651599]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0645772]
+}
+
+[sub_resource type="Animation" id="Animation_rsrdg"]
+resource_name = "vent"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-10, 0), Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0651599, 0.077563]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0645772, 0.0767945]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_16a7w"]
 _data = {
@@ -64,12 +88,16 @@ _data = {
 &"vent": SubResource("Animation_rsrdg")
 }
 
-[node name="AppleTree" type="Sprite2D"]
+[node name="AppleTree" type="Node2D"]
 position = Vector2(-10, 0)
 rotation = -0.0651599
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 150)
+rotation = -0.0645772
 scale = Vector2(1.426, 1.426)
 texture = ExtResource("1_rsrdg")
-offset = Vector2(0, -150)
+offset = Vector2(-17.5, -231)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

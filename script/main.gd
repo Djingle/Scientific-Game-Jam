@@ -21,8 +21,9 @@ func gnome_drag_and_drop() -> void:
 	if Input.is_action_just_pressed("mouse_click") and gnome_array.size() > 0:
 		#Get the gnome with the highest y position (the lowest on the screen)
 		var gnome : Gnome = gnome_array[0]
-		for child in gnome_array:
-			if child.position.y > gnome.position.y: gnome = child
+		for child : Gnome in gnome_array:
+			print(child.immune_to_pickup)
+			if child.position.y > gnome.position.y and !child.cant_be_caught: gnome = child
 		#Set is as being dragged
 		gnome_array[gnome_array.find(gnome)].drag()
 
@@ -47,15 +48,19 @@ func quest_start(quest : Quest, pos : Vector2) -> void:
 	$CanvasLayer/UI.display_text(quest.speech_intro)
 
 func quest_completed(quest : Quest) -> void:
+	$CanvasLayer/UI.incremente_quest_count()
 	$CanvasLayer/UI.display_text(quest.speech_outro)
 	await $CanvasLayer/UI.text_written
 	$QuestEndTimer.start()
 	await $QuestEndTimer.timeout
+	#If the quest has a next quest, activate it, otherwise end the game
 	if quest.next_quest:
 		quest.next_quest.is_active = true
 		quest.next_quest.start_quest()
 	else:
 		$AudioStreamPlayer.stop()
+		#Can no longer pick gnomes
+		$CanvasLayer/UI.mouse_filter = 0
 		$EndScreenMusic.play()
 		$CanvasLayer/TransitionQuest.show()
 		$CanvasLayer/EndScreen.show()
@@ -64,4 +69,3 @@ func quest_completed(quest : Quest) -> void:
 		await tween.finished
 		var tween_end = create_tween()
 		tween_end.tween_property($CanvasLayer/EndScreen, "modulate:a", 1, 0.75)
-		

@@ -146,19 +146,19 @@ goal_gnome = NodePath("../../Map/GnomeCollection/QuestGiver4")
 [node name="UI" parent="CanvasLayer" instance=ExtResource("4_ifly3")]
 
 [node name="TransitionQuest" type="ColorRect" parent="CanvasLayer"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 0)
 
 [node name="EndScreen" type="TextureRect" parent="CanvasLayer"]
-visible = false
 modulate = Color(1, 1, 1, 0)
 offset_right = 1980.0
 offset_bottom = 1080.0
+mouse_filter = 2
 texture = ExtResource("5_qhlk3")
 
 [node name="QuestEndTimer" type="Timer" parent="."]
@@ -172,7 +172,7 @@ position = Vector2(-1, 0)
 y_sort_enabled = true
 
 [node name="QuestGiver1" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
-position = Vector2(43, -1860)
+position = Vector2(9, -1861)
 gnome_size = 4.0
 cant_be_caught = true
 sprite = ExtResource("7_oghkn")
@@ -190,7 +190,7 @@ grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsg
 drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l35hp"), ExtResource("24_nancs"), ExtResource("25_nn3c6"), ExtResource("26_trx43"), ExtResource("27_ng1ms"), ExtResource("28_5k4e1"), ExtResource("29_hb70x"), ExtResource("30_n75nk"), ExtResource("31_5fb27"), ExtResource("32_jqyr5"), ExtResource("33_xvlrw"), ExtResource("33_xvlrw"), ExtResource("34_k8mof"), ExtResource("35_r1f0u"), ExtResource("36_vk7ho"), ExtResource("37_kqhp7"), ExtResource("38_aynsv"), ExtResource("39_j7rf7"), ExtResource("40_3nqbd"), ExtResource("41_m7au5"), ExtResource("42_napxc"), ExtResource("43_gwbfd"), ExtResource("44_6tfr3"), ExtResource("45_d211s"), ExtResource("46_jgdaf"), ExtResource("47_uyt2v"), ExtResource("48_6q5kw"), ExtResource("49_qn57e"), ExtResource("50_3yw5j"), ExtResource("51_fj14y"), ExtResource("52_pnx11"), ExtResource("53_s804j"), ExtResource("54_yisit"), ExtResource("55_if8rt"), ExtResource("56_cy20s"), ExtResource("57_qylf8"), ExtResource("58_0o1c0"), ExtResource("59_xhvmo"), ExtResource("60_ew863"), ExtResource("61_kce8d"), ExtResource("22_po5cl"), ExtResource("23_l35hp"), ExtResource("24_nancs"), ExtResource("25_nn3c6"), ExtResource("26_trx43"), ExtResource("27_ng1ms"), ExtResource("28_5k4e1"), ExtResource("29_hb70x"), ExtResource("30_n75nk"), ExtResource("31_5fb27"), ExtResource("32_jqyr5"), ExtResource("33_xvlrw"), ExtResource("34_k8mof"), ExtResource("35_r1f0u"), ExtResource("36_vk7ho"), ExtResource("62_w12j7"), ExtResource("37_kqhp7"), ExtResource("38_aynsv"), ExtResource("39_j7rf7"), ExtResource("40_3nqbd"), ExtResource("41_m7au5"), ExtResource("42_napxc"), ExtResource("43_gwbfd"), ExtResource("44_6tfr3"), ExtResource("45_d211s"), ExtResource("46_jgdaf"), ExtResource("47_uyt2v"), ExtResource("48_6q5kw"), ExtResource("49_qn57e"), ExtResource("50_3yw5j"), ExtResource("51_fj14y"), ExtResource("52_pnx11"), ExtResource("53_s804j"), ExtResource("54_yisit"), ExtResource("55_if8rt"), ExtResource("56_cy20s"), ExtResource("57_qylf8"), ExtResource("58_0o1c0"), ExtResource("59_xhvmo"), ExtResource("60_ew863"), ExtResource("61_kce8d")])
 
 [node name="QuestGiver3" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
-position = Vector2(-210, 490)
+position = Vector2(-240, 383)
 gnome_size = 4.0
 cant_be_caught = true
 sprite = ExtResource("9_6jvul")
@@ -278,7 +278,7 @@ grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsg
 drop_sounds = Array[AudioStreamWAV]([ExtResource("22_po5cl"), ExtResource("23_l35hp"), ExtResource("24_nancs"), ExtResource("25_nn3c6"), ExtResource("26_trx43"), ExtResource("27_ng1ms"), ExtResource("28_5k4e1"), ExtResource("29_hb70x"), ExtResource("30_n75nk"), ExtResource("31_5fb27"), ExtResource("32_jqyr5"), ExtResource("33_xvlrw"), ExtResource("33_xvlrw"), ExtResource("34_k8mof"), ExtResource("35_r1f0u"), ExtResource("36_vk7ho"), ExtResource("37_kqhp7"), ExtResource("38_aynsv"), ExtResource("39_j7rf7"), ExtResource("40_3nqbd"), ExtResource("41_m7au5"), ExtResource("42_napxc"), ExtResource("43_gwbfd"), ExtResource("44_6tfr3"), ExtResource("45_d211s"), ExtResource("46_jgdaf"), ExtResource("47_uyt2v"), ExtResource("48_6q5kw"), ExtResource("49_qn57e"), ExtResource("50_3yw5j"), ExtResource("51_fj14y"), ExtResource("52_pnx11"), ExtResource("53_s804j"), ExtResource("54_yisit"), ExtResource("55_if8rt"), ExtResource("56_cy20s"), ExtResource("57_qylf8"), ExtResource("58_0o1c0"), ExtResource("59_xhvmo"), ExtResource("60_ew863"), ExtResource("61_kce8d"), ExtResource("22_po5cl"), ExtResource("23_l35hp"), ExtResource("24_nancs"), ExtResource("25_nn3c6"), ExtResource("26_trx43"), ExtResource("27_ng1ms"), ExtResource("28_5k4e1"), ExtResource("29_hb70x"), ExtResource("30_n75nk"), ExtResource("31_5fb27"), ExtResource("32_jqyr5"), ExtResource("33_xvlrw"), ExtResource("34_k8mof"), ExtResource("35_r1f0u"), ExtResource("36_vk7ho"), ExtResource("62_w12j7"), ExtResource("37_kqhp7"), ExtResource("38_aynsv"), ExtResource("39_j7rf7"), ExtResource("40_3nqbd"), ExtResource("41_m7au5"), ExtResource("42_napxc"), ExtResource("43_gwbfd"), ExtResource("44_6tfr3"), ExtResource("45_d211s"), ExtResource("46_jgdaf"), ExtResource("47_uyt2v"), ExtResource("48_6q5kw"), ExtResource("49_qn57e"), ExtResource("50_3yw5j"), ExtResource("51_fj14y"), ExtResource("52_pnx11"), ExtResource("53_s804j"), ExtResource("54_yisit"), ExtResource("55_if8rt"), ExtResource("56_cy20s"), ExtResource("57_qylf8"), ExtResource("58_0o1c0"), ExtResource("59_xhvmo"), ExtResource("60_ew863"), ExtResource("61_kce8d")])
 
 [node name="Villager8" parent="Map/GnomeCollection" instance=ExtResource("6_oghkn")]
-position = Vector2(-2453, -2440)
+position = Vector2(-2510, -2363)
 gnome_size = 4.0
 sprite = ExtResource("22_5mihj")
 grab_sounds = Array[AudioStreamWAV]([ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3"), ExtResource("8_bw28y"), ExtResource("9_utsgy"), ExtResource("10_6w1up"), ExtResource("11_pkerm"), ExtResource("12_kc6rh"), ExtResource("13_bibbi"), ExtResource("14_qhlk3"), ExtResource("15_ep57x"), ExtResource("16_5vuo7"), ExtResource("17_4o1ux"), ExtResource("18_pcs6p"), ExtResource("19_i185g"), ExtResource("20_s33b5"), ExtResource("21_nuxf3")])
